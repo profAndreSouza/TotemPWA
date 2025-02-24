@@ -1,0 +1,41 @@
+# Ignore arquivos binários e de compilação
+bin/
+obj/
+
+# Arquivos do Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs e caches
+*.log
+*.cache
+*.vspscc
+*.vssscc
+
+# Pacotes e dependências
+packages/
+*.nupkg
+project.lock.json
+project.assets.json
+
+# Configurações temporárias
+*.tmp
+*.bak
+
+# Arquivos gerados pelo Rider/JetBrains
+.idea/
+*.sln.iml
+
+# Arquivos de publicação
+publish/
+
+# Arquivos específicos do Dotnet
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+docker-compose.override.yml
