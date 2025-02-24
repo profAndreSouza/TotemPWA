@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TotemPWA.bundle.scp.css",
-      "PackagePath": "staticwebassets\\TotemPWA.i6yagiro6r.bundle.scp.css"
-    },
-    {
       "Id": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
