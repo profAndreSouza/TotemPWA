@@ -20,14 +20,12 @@
 | **RF16** | Navegação por Categorias            | Permite alternar entre lanches, combos, sobremesas, etc. |
 | **RF17** | Filtros no Menu                     | Disponibiliza filtros no topo da interface para refinar a busca. |
 | **RF18** | Progresso do Pedido                 | Exibe as etapas do processamento do pedido em tempo real. |
-| **RF19** | Notificação de Pedido Pronto        | Cliente recebe alerta via Push/SMS/QRCode quando o pedido está pronto. |
+| **RF19** | Notificação de Pedido Pronto        | Cliente recebe alerta via telão quando o pedido está pronto. |
 | **RF20** | Cadastro de Categorias e Subcategorias | Permite gerenciar categorias e subcategorias dos produtos. |
 | **RF21** | Limite de Ingredientes              | Define a quantidade máxima de personalizações por item. |
 | **RF22** | Gerenciamento do Cardápio (Admin)   | Admin pode adicionar, editar e remover itens do cardápio. |
 | **RF23** | Relatório de Vendas e Preferências  | Geração de relatórios sobre vendas e comportamento dos clientes. |
-| **RF24** | Integração com Programa de Fidelidade | Permite acúmulo e resgate de pontos via QR Code ou login. |
-| **RF25** | Suporte a Múltiplos Idiomas         | Interface disponível em diferentes idiomas. |
-| **RF26** | Modo Noturno                        | Permite alternar entre tema claro e escuro. |
+| **RF24** | Integração com Programa de Fidelidade | Permite acúmulo e resgate de pontos via login. |
 
 ---
 
@@ -50,7 +48,6 @@
 | **RNF13** | Proteção de Dados                  | Armazenamento seguro e criptografado das informações. |
 | **RNF14** | Usabilidade (UI/UX)                | Design focado em experiência do usuário eficiente e acessível. |
 | **RNF15** | Capacidade de Processamento        | Deve suportar alto volume de transações sem lentidão. |
-| **RNF16** | Redundância                        | Infraestrutura resiliente para evitar falhas. |
-| **RNF17** | Modo Offline                       | Deve permitir operação mínima sem internet, com sincronização posterior. |
-| **RNF18** | Cache para Carregamento Rápido     | Armazenamento local para otimizar velocidade. |
-| **RNF19** | Análise de Uso e Relatórios        | Coleta de métricas para melhorar interface e performance. |
+| **RNF16** | Modo Offline                       | Deve permitir operação mínima sem internet, com sincronização posterior. |
+| **RNF17** | Cache para Carregamento Rápido     | Armazenamento local para otimizar velocidade. |
+| **RNF18** | Análise de Uso e Relatórios        | Coleta de métricas para melhorar interface e performance. |
