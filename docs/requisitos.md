@@ -51,3 +51,4 @@
 | **RNF16** | Modo Offline                       | Deve permitir operação mínima sem internet, com sincronização posterior. |
 | **RNF17** | Cache para Carregamento Rápido     | Armazenamento local para otimizar velocidade. |
 | **RNF18** | Análise de Uso e Relatórios        | Coleta de métricas para melhorar interface e performance. |
+| **RNF19** | Tempo de Inatividade               | O sistema deverá retornar automaticamente para a tela inicial após 1 minuto de inatividade, garantindo que pedidos abandonados não fiquem na tela e liberando o totem para novos clientes. |
