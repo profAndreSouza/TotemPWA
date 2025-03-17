@@ -2,9 +2,9 @@
 
 | Id   | Nome                                     | Descrição |
 |------|------------------------------------------|-----------|
-| **RF01** | Tela de Início                       | Exibe a tela principal do totem com opções de pedidos. |
-| **RF02** | Escolha do Tipo de Pedido           | Permite selecionar entre "Viagem", "Consumo no Local" ou "Retirada". |
-| **RF03** | Login e Identificação               | Cliente pode se identificar via CPF, login anônimo ou QR Code (fidelidade). |
+| **RF01** | Tela de Início                       | Exibe a tela principal do totem com opções de "iniciar pedido". |
+| **RF02** | Escolha do Tipo de Pedido           | Permite selecionar entre "Viagem" ou "Consumo no Local". |
+| **RF03** | Login e Identificação               | Cliente pode se identificar via CPF ou login anônimo. |
 | **RF04** | Aplicação de Cupons                 | Permite inserir cupons de desconto antes do pagamento. |
 | **RF05** | Seleção de Itens                    | Exibição dos produtos disponíveis com imagem, preço e descrição. |
 | **RF06** | Personalização de Ingredientes      | Cliente pode adicionar ou remover ingredientes dos produtos. |
