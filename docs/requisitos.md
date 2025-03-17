@@ -33,7 +33,7 @@
 
 | Id    | Nome                                   | Descrição |
 |-------|----------------------------------------|-----------|
-| **RNF01** | Tempo de Resposta                  | Exibição de menus em até 2 segundos. |
+| **RNF01** | Tempo de Resposta                  | Exibição de menus em até 4 segundos. |
 | **RNF02** | Interface Intuitiva                | UI deve ser de fácil compreensão e uso. |
 | **RNF03** | Segurança de Pagamento             | Proteção contra fraudes e segurança nos dados bancários. |
 | **RNF04** | Conformidade com LGPD              | Sistema deve garantir privacidade e proteção de dados do usuário. |
