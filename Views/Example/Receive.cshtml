@@ -1,0 +1,13 @@
+@{
+    Layout = "_WelcomeLayout";
+}
+
+<h2> Texto Recebido </h2>
+@if (ViewBag.nome != null)
+{
+    <p>@ViewBag.nome</p>
+}
+else
+{
+    <p>Texto em branco</p>
+}
