@@ -1,4 +1,4 @@
-# ** Git Flow e Outros**
+# **Git Flow e Outros**
 
 ## **1. Uso do Git Flow**
 

@@ -1,9 +1,149 @@
-body {
-  background-color: aquamarine;
+/* ========== RESET BÁSICO ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.center {
+/* ========== CORPO ========== */
+body {
+  font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #FFEE63; /* Amarelo Claro */
   align-items: center;
   justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ========== PÁGINA INICIAL ========== */
+.main-container {
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.main-container h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #990000; /* Vermelho Escuro */
+}
+
+/* Botão de Iniciar Pedido */
+.btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #FF5B00; /* Laranja Intenso */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #D4D925; /* Amarelo Esverdeado */
+  color: #000;
+}
+
+/* Informações da tela */
+#info {
+  position: relative;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* ========== HEADER ========== */
+.header {
+  background-color: #990000; /* Vermelho Escuro */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.header img {
+  max-width: 100px;
+}
+
+/* ========== MENU ========== */
+.menu-container {
+  flex: 1;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #FF5B00; /* Laranja Intenso */
+}
+
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.menu-item .options {
+  flex: 1;
+}
+
+.menu-item h3 {
+  margin-bottom: 5px;
+  color: #990000; /* Vermelho Escuro */
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: #990000; /* Vermelho Escuro */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
 }

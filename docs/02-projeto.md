@@ -90,7 +90,7 @@ O cardápio será inspirado nos totens do BK e McDonald's, com alguns detalhes c
 | **RNF04** | Conformidade com LGPD                 | Sistema deve garantir privacidade e proteção de dados do usuário. |
 | **RNF05** | Deploy Contínuo                       | Atualizações sem interrupção do serviço. |
 | **RNF06** | Prevenção de Travamentos              | Implementação de mecanismos para evitar congelamento da tela. |
-| **RNF07** | Responsividade                        | O sistema deve ser um **PWA** e funcionar em diferentes dispositivos. |
+| **RNF07 (Cancelado)** | Responsividade                        | O sistema deve ser um **PWA** e funcionar em diferentes dispositivos. |
 | **RNF08** | Escalabilidade                        | Suporte para expansão sem perda de desempenho. |
 | **RNF09** | Disponibilidade 24/7                  | Sistema deve estar sempre acessível. |
 | **RNF10** | Proteção contra Ataques               | Medidas contra injeções SQL, XSS, e outras ameaças. |
@@ -141,7 +141,7 @@ O cardápio será inspirado nos totens do BK e McDonald's, com alguns detalhes c
 #### Critérios de Aceitação
 - Exibe claramente as opções "Viagem" e "Consumo no local" (RF02)
 - Ícones e textos autoexplicativos (RNF14)
-- Botões responsivos e funcionais (RNF07)
+- Botões funcionais (RNF14)
 
 ---
 
@@ -213,7 +213,7 @@ O cardápio será inspirado nos totens do BK e McDonald's, com alguns detalhes c
 #### Critérios de Aceitação
 - Exibe resumo claro dos itens (quantidade, preço) (RF08)
 - Botão para confirmar e voltar
-- Layout responsivo e fácil de entender (RNF07 e RNF14)
+- Layout fácil de entender (RNF14)
 
 ---
 

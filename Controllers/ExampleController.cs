@@ -12,7 +12,7 @@ public class ExampleController : Controller
     {
         _logger = logger;
     }
-
+    
     public IActionResult Index()
     {
         return View();

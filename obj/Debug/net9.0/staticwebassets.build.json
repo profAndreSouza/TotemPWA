@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MjfeRo7B2HzkbSs1dQksSIrkSJrYQypkNlYZ8XDAiAU=",
+  "Hash": "kWD/s3eZOaJkaJP6UXOtbgcL8imvDRn3lNBcGbf9FYM=",
   "Source": "TotemPWA",
   "BasePath": "_content/TotemPWA",
   "Mode": "Default",
@@ -185,12 +185,12 @@
       "OriginalItemSpec": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-vcxn7o4gh8.gz",
+      "Identity": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-r6z5tt14hb.gz",
       "SourceId": "TotemPWA",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/TotemPWA",
-      "RelativePath": "css/site#[.{fingerprint=vcxn7o4gh8}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=r6z5tt14hb}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -199,8 +199,8 @@
       "RelatedAsset": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "nhow9zk1er",
-      "Integrity": "+9gXlYf+8rJ768xvJvqG7vOZGPYEIogY1Y1xXfnGKjQ=",
+      "Fingerprint": "k35kywyzxt",
+      "Integrity": "MOetx1+MwEfpMYmT6T5qvBnMvynzh5QrSwV84MwLbeQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css"
@@ -1333,8 +1333,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vcxn7o4gh8",
-      "Integrity": "YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo=",
+      "Fingerprint": "r6z5tt14hb",
+      "Integrity": "nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2645,12 +2645,12 @@
   "Endpoints": [
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-vcxn7o4gh8.gz",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-r6z5tt14hb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.008333333333"
+          "Quality": "0.001114827202"
         }
       ],
       "ResponseHeaders": [
@@ -2660,15 +2660,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "119"
+          "Value": "896"
         },
         {
           "Name": "ETag",
-          "Value": "\"+9gXlYf+8rJ768xvJvqG7vOZGPYEIogY1Y1xXfnGKjQ=\""
+          "Value": "\"MOetx1+MwEfpMYmT6T5qvBnMvynzh5QrSwV84MwLbeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 19:47:31 GMT"
+          "Value": "Mon, 24 Mar 2025 16:29:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2688,13 +2688,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo=\""
+          "Value": "W/\"nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo="
+          "Value": "sha256-nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk="
         }
       ]
     },
@@ -2709,7 +2709,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "128"
+          "Value": "2796"
         },
         {
           "Name": "Content-Type",
@@ -2717,11 +2717,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo=\""
+          "Value": "\"nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 19:47:31 GMT"
+          "Value": "Mon, 24 Mar 2025 16:29:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2731,13 +2731,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo="
+          "Value": "sha256-nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-vcxn7o4gh8.gz",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-r6z5tt14hb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2746,7 +2746,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "119"
+          "Value": "896"
         },
         {
           "Name": "Content-Type",
@@ -2754,11 +2754,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+9gXlYf+8rJ768xvJvqG7vOZGPYEIogY1Y1xXfnGKjQ=\""
+          "Value": "\"MOetx1+MwEfpMYmT6T5qvBnMvynzh5QrSwV84MwLbeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 19:47:31 GMT"
+          "Value": "Mon, 24 Mar 2025 16:29:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2776,18 +2776,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+9gXlYf+8rJ768xvJvqG7vOZGPYEIogY1Y1xXfnGKjQ="
+          "Value": "sha256-MOetx1+MwEfpMYmT6T5qvBnMvynzh5QrSwV84MwLbeQ="
         }
       ]
     },
     {
-      "Route": "css/site.vcxn7o4gh8.css",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-vcxn7o4gh8.gz",
+      "Route": "css/site.r6z5tt14hb.css",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-r6z5tt14hb.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.008333333333"
+          "Quality": "0.001114827202"
         }
       ],
       "ResponseHeaders": [
@@ -2797,15 +2797,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "119"
+          "Value": "896"
         },
         {
           "Name": "ETag",
-          "Value": "\"+9gXlYf+8rJ768xvJvqG7vOZGPYEIogY1Y1xXfnGKjQ=\""
+          "Value": "\"MOetx1+MwEfpMYmT6T5qvBnMvynzh5QrSwV84MwLbeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 19:47:31 GMT"
+          "Value": "Mon, 24 Mar 2025 16:29:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2825,13 +2825,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo=\""
+          "Value": "W/\"nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vcxn7o4gh8"
+          "Value": "r6z5tt14hb"
         },
         {
           "Name": "label",
@@ -2839,12 +2839,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo="
+          "Value": "sha256-nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk="
         }
       ]
     },
     {
-      "Route": "css/site.vcxn7o4gh8.css",
+      "Route": "css/site.r6z5tt14hb.css",
       "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2854,7 +2854,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "128"
+          "Value": "2796"
         },
         {
           "Name": "Content-Type",
@@ -2862,11 +2862,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo=\""
+          "Value": "\"nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 19:47:31 GMT"
+          "Value": "Mon, 24 Mar 2025 16:29:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2876,7 +2876,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vcxn7o4gh8"
+          "Value": "r6z5tt14hb"
         },
         {
           "Name": "label",
@@ -2884,13 +2884,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-YfDKDXPsdMXI9kiFzw9zS+rNwWRdg/VpJc8xjAY+FZo="
+          "Value": "sha256-nd1KMqx62//2VzETPxZa9oOoD1E6+zeDGOVRDzgyxKk="
         }
       ]
     },
     {
-      "Route": "css/site.vcxn7o4gh8.css.gz",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-vcxn7o4gh8.gz",
+      "Route": "css/site.r6z5tt14hb.css.gz",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-r6z5tt14hb.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2899,7 +2899,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "119"
+          "Value": "896"
         },
         {
           "Name": "Content-Type",
@@ -2907,11 +2907,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+9gXlYf+8rJ768xvJvqG7vOZGPYEIogY1Y1xXfnGKjQ=\""
+          "Value": "\"MOetx1+MwEfpMYmT6T5qvBnMvynzh5QrSwV84MwLbeQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 24 Feb 2025 19:47:31 GMT"
+          "Value": "Mon, 24 Mar 2025 16:29:25 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2929,7 +2929,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vcxn7o4gh8"
+          "Value": "r6z5tt14hb"
         },
         {
           "Name": "label",
@@ -2937,7 +2937,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+9gXlYf+8rJ768xvJvqG7vOZGPYEIogY1Y1xXfnGKjQ="
+          "Value": "sha256-MOetx1+MwEfpMYmT6T5qvBnMvynzh5QrSwV84MwLbeQ="
         }
       ]
     },

@@ -16,7 +16,6 @@ C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\TotemPWA.RazorAssemblyInfo.cache
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\TotemPWA.RazorAssemblyInfo.cs
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\TotemPWA.sourcelink.json
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\scopedcss\bundle\TotemPWA.styles.css
-C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\compressed\5x7mdqe4nv-vcxn7o4gh8.gz
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\compressed\ade2i2q1em-61n19gt1b8.gz
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\compressed\9y97fnyyhx-xtxxf3hu2r.gz
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\compressed\no2xol4q6l-t1cqhe9u97.gz
@@ -92,3 +91,4 @@ C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\refint\TotemPWA.dll
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\TotemPWA.pdb
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\TotemPWA.genruntimeconfig.cache
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\ref\TotemPWA.dll
+C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\compressed\5x7mdqe4nv-r6z5tt14hb.gz

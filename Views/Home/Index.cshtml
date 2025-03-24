@@ -1,7 +1,62 @@
 ﻿@{
-    Layout = "_WelcomeLayout";
+    ViewData["Title"] = "Página Inicial";
 }
 
-<div class="center">
-    <button>Iniciar Pedido</button>
-</div>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>ADS Burger</h1>
+        <a href="@Url.Action("Menu", "Pedido") ">
+            <button class="btn">Faça seu pedido aqui</button>
+        </a>
+        <div id="info">Carregando...</div>
+    </div>
+
+
+    <script>
+        function getScreenInfo() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            function getAspectRatio(w, h) {
+                const gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+                const divisor = gcd(w, h);
+                return `${w / divisor}:${h / divisor}`;
+            }
+
+            function getAspectRatio8(width, height) {
+                const targetHeight = 8;
+                const aspectWidth = (width / height) * targetHeight;
+                return `${aspectWidth.toFixed(0)}:8`;
+            }
+
+            function calculateWidthFromVW(vwHeight) {
+                const aspectRatio = 5 / 8;
+                return vwHeight * aspectRatio;
+            }
+
+            const aspectRatio = getAspectRatio8(width, height);
+            const idealRatio = getAspectRatio(800, 1280);
+            const widthVW = (width / window.innerWidth) * 100;
+            const widthIdeal = calculateWidthFromVW(height);
+
+            document.getElementById("info").innerHTML = `
+                <strong>Resolução:</strong> ${width}x${height} (${widthVW.toFixed(2)}vw) <br>
+                <strong>Proporção:</strong> ${aspectRatio} <br> <br>
+                <strong>Resolução Ideal:</strong> ${widthIdeal}x${height}<br>
+                <strong>Proporção Ideal:</strong> ${idealRatio}
+            `;
+        }
+
+        getScreenInfo();
+        window.addEventListener("resize", getScreenInfo);
+    </script>
+</body>
+</html>
