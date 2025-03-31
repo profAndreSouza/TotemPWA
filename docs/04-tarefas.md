@@ -81,3 +81,11 @@ Gerar as User Histories baseadas nas funcionalidades, por exemplo:
 - Como atendente, quero visualizar todos os pedidos em andamento, para que eu possa gerenciá-los e preparar os lanches.
 - Como administrador, quero acessar um histórico de pedidos, para que eu possa analisar o desempenho de vendas.
 
+
+## 24/mar/2025 - Tarefa 03
+
+### Construir páginas (ou popup) estáticas
+
+- Seleção do item
+- Carrinho listando pedidos
+- Personalização de ingredientes

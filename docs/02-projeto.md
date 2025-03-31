@@ -309,3 +309,133 @@ O cardápio será inspirado nos totens do BK e McDonald's, com alguns detalhes c
 - O sistema deve exibir status como "Em preparo" e "Pronto para retirada" (RF18)
 - O cliente deve conseguir visualizar sua posição na fila (RF18)
 - A atualização do status deve ser automática
+
+## 4. Casos de Uso - ADS Burguer
+
+### 1. Iniciar Pedido
+**Ator Principal:** Cliente  
+**Ator Secundário:** N/A  
+**Fluxo Principal:**  
+1. O cliente acessa o totem.  
+2. O sistema exibe a tela inicial com a opção "Iniciar Pedido".  
+3. O cliente seleciona "Iniciar Pedido".  
+4. O sistema direciona o cliente para a escolha do tipo de pedido.  
+
+**Fluxo de Exceção:**  
+- (E1) Se o sistema estiver fora do ar, exibir mensagem de erro e instruir o cliente a procurar atendimento presencial.
+
+---
+
+### 2. Escolher Tipo de Pedido
+**Ator Principal:** Cliente  
+**Ator Secundário:** N/A  
+**Fluxo Principal:**  
+1. O cliente escolhe entre "Viagem" ou "Consumo no Local".  
+2. O sistema registra a escolha e direciona para a próxima etapa.  
+
+**Fluxo de Exceção:**  
+- (E1) Se o cliente não selecionar nenhuma opção em 30 segundos, exibir lembrete. Após 1 minuto de inatividade, retornar à tela inicial.
+
+---
+
+### 3. Seleção de Itens
+**Ator Principal:** Cliente  
+**Ator Secundário:** N/A  
+**Fluxo Principal:**  
+1. O sistema exibe os produtos disponíveis.  
+2. O cliente pode visualizar categorias e detalhes dos produtos.  
+3. O cliente seleciona um item para adicionar ao carrinho.  
+4. O sistema registra a seleção e atualiza o carrinho.  
+
+**Fluxo de Exceção:**  
+- (E1) Se um item estiver esgotado, exibir mensagem de indisponibilidade e sugerir itens similares.
+
+---
+
+### 4. Personalização de Ingredientes
+**Ator Principal:** Cliente  
+**Ator Secundário:** N/A  
+**Fluxo Principal:**  
+1. O cliente seleciona um item personalizável.  
+2. O sistema exibe opções para adicionar/remover ingredientes.  
+3. O cliente escolhe os ingredientes desejados dentro dos limites definidos.  
+4. O sistema confirma a personalização e adiciona o item ao carrinho.  
+
+**Fluxo de Exceção:**  
+- (E1) Se o cliente tentar ultrapassar o limite de personalização, exibir alerta informando a restrição.
+
+---
+
+### 5. Aplicação de Cupom de Desconto
+**Ator Principal:** Cliente  
+**Ator Secundário:** Sistema de Promoções  
+**Fluxo Principal:**  
+1. O cliente insere um código de cupom.  
+2. O sistema verifica a validade do cupom.  
+3. Se válido, o desconto é aplicado ao pedido.  
+
+**Fluxo de Exceção:**  
+- (E1) Se o cupom for inválido ou expirado, exibir mensagem de erro.
+
+---
+
+### 6. Revisão do Pedido
+**Ator Principal:** Cliente  
+**Ator Secundário:** N/A  
+**Fluxo Principal:**  
+1. O cliente acessa a tela de resumo do pedido.  
+2. O sistema exibe os itens adicionados, valores e opções de personalização.  
+3. O cliente pode confirmar ou modificar o pedido.  
+
+**Fluxo de Exceção:**  
+- (E1) Se houver erro na exibição dos itens, o cliente pode retornar à seleção de itens e corrigir antes de finalizar.
+
+---
+
+### 7. Pagamento
+**Ator Principal:** Cliente  
+**Ator Secundário:** Sistema de Pagamento  
+**Fluxo Principal:**  
+1. O cliente escolhe a forma de pagamento (Pix, Cartão, Dinheiro, etc.).  
+2. O sistema processa o pagamento.  
+3. Se aprovado, o sistema confirma a compra e encaminha o pedido para a cozinha.  
+
+**Fluxo de Exceção:**  
+- (E1) Se o pagamento for recusado, o sistema exibe mensagem de erro e permite tentar novamente ou escolher outro método de pagamento.
+
+---
+
+### 8. Emissão de Nota Fiscal
+**Ator Principal:** Cliente  
+**Ator Secundário:** Sistema Fiscal  
+**Fluxo Principal:**  
+1. O cliente escolhe se deseja a nota fiscal com CPF ou anônima.  
+2. O sistema gera a nota fiscal e imprime.  
+
+**Fluxo de Exceção:**  
+- (E1) Se houver falha na impressão, exibir mensagem e fornecer a opção de envio por e-mail ou SMS.
+
+---
+
+### 9. Identificação do Pedido
+**Ator Principal:** Cliente  
+**Ator Secundário:** Sistema de Gestão de Pedidos  
+**Fluxo Principal:**  
+1. O sistema exibe um código de identificação do pedido.  
+2. O cliente pode acompanhar o status no painel.  
+
+**Fluxo de Exceção:**  
+- (E1) Se o pedido não for encontrado, exibir mensagem de erro e instruir o cliente a buscar atendimento.
+
+---
+
+### 10. Notificação de Pedido Pronto
+**Ator Principal:** Cliente  
+**Ator Secundário:** Sistema de Gestão de Pedidos  
+**Fluxo Principal:**  
+1. O pedido é finalizado na cozinha.  
+2. O sistema notifica o cliente pelo painel e/ou SMS.  
+3. O cliente retira o pedido no balcão.  
+
+**Fluxo de Exceção:**  
+- (E1) Se o pedido atrasar, exibir estimativa atualizada no painel e oferecer brindes conforme política do restaurante.
