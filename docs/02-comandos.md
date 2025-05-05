@@ -85,3 +85,8 @@ public virtual string Action (string actionName, string controllerName);
 #### Retorno  
 - **(String)** – Retorna a URL totalmente qualificada para o método de ação.
 
+
+## Adicionar Pacotes NuGet do Entity Framework Core
+
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
