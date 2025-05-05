@@ -1,12 +1,24 @@
 {
   "Files": [
     {
+      "Id": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\img\\burguer.png",
+      "PackagePath": "staticwebassets\\img\\burguer.png"
+    },
+    {
+      "Id": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\img\\logotipo.jpeg",
+      "PackagePath": "staticwebassets\\img\\logotipo.jpeg"
     },
     {
       "Id": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\js\\site.js",

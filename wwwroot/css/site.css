@@ -1,149 +1,220 @@
-/* ========== RESET BÁSICO ========== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ========== CORPO ========== */
+/* BODY com formas livres e vidro fosco */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color: #FFEE63; /* Amarelo Claro */
-  align-items: center;
-  justify-content: center;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-/* ========== PÁGINA INICIAL ========== */
-.main-container {
-  text-align: center;
-  width: 90%;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #FFF;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.main-container h1 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #990000; /* Vermelho Escuro */
-}
-
-/* Botão de Iniciar Pedido */
-.btn {
-  padding: 15px 30px;
-  font-size: 18px;
-  background-color: #FF5B00; /* Laranja Intenso */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin: 20px auto;
+  background-color: #2c0a0a;
+  overflow-x: hidden;
   position: relative;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  color: #fff;
+  overflow: hidden;
 }
 
-.btn:hover {
-  background-color: #D4D925; /* Amarelo Esverdeado */
-  color: #000;
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.3;
+  z-index: 0;
 }
 
-/* Informações da tela */
-#info {
-  position: relative;
-  font-size: 14px;
-  color: #333;
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
-  font-weight: bold;
+body::before {
+  background: #ff7043;
+  top: -150px;
+  left: -100px;
 }
 
-/* ========== HEADER ========== */
+body::after {
+  background: #990000;
+  bottom: -150px;
+  right: -100px;
+}
+
+/* HEADER */
 .header {
-  background-color: #990000; /* Vermelho Escuro */
-  color: white;
-  text-align: center;
-  padding: 15px;
+  background: rgba(153, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
   width: 100%;
-  font-size: 18px;
-  font-weight: bold;
+  height: 200px;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 0;
 }
 
 .header img {
-  max-width: 100px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* ========== MENU ========== */
+.main-content {
+  display: flex;
+  flex-direction: row;
+  padding-left: 150px;
+  margin-top: 120px;
+  margin-bottom: 80px;
+  gap: 30px;
+  z-index: 1;
+}
+
+/* SIDEBAR FIXA À ESQUERDA */
+.sidebar {
+  position: fixed;
+  top: 200px;
+  bottom: 60px;
+  left: 0;
+  width: 150px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(8px);
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  z-index: 5;
+}
+
+.category-btn {
+  background-color: #ff7043;
+  border: none;
+  color: white;
+  padding: 12px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: left;
+}
+
+.category-btn:hover {
+  background-color: #ff5722;
+}
+
+/* MENU */
 .menu-container {
   flex: 1;
-  margin-top: 100px;
-  margin-bottom: 60px;
+  margin: 0;
+  padding: 20px;
+  margin-left: 0px;
+  margin-top: 80px; 
+  margin-bottom: 60px; 
+  overflow-y: auto;
+  max-height: calc(100vh - 260px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  position: relative;
+  z-index: 1;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 112, 67, 0.8) rgba(255, 255, 255, 0.05);
 }
 
+/* Estiliza a barra de rolagem para WebKit (Chrome, Edge, Safari) */
+.menu-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.menu-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 112, 67, 0.8); /* cor laranja translúcida */
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1); /* efeito de contorno */
+}
+
+.menu-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 87, 34, 1); /* cor mais intensa no hover */
+}
+
+
+.menu-container h1 {
+  font-size: 28px;
+  color: #fffbe6;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* ITEM */
 .menu-item {
   display: flex;
   align-items: center;
-  background-color: #fff;
-  padding: 15px;
-  margin-bottom: 10px;
-  width: 80%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-left: 5px solid #FF5B00; /* Laranja Intenso */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 16px 20px;
+  margin-bottom: 18px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-left: 6px solid #FF5B00;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .menu-item img {
   width: 80px;
   height: 80px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-right: 15px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
-.menu-item .options {
-  flex: 1;
-}
-
-.menu-item h3 {
+.options h3 {
+  color: #ffd54f;
   margin-bottom: 5px;
-  color: #990000; /* Vermelho Escuro */
+  font-size: 18px;
 }
 
-/* ========== FOOTER ========== */
+.options p {
+  font-size: 14px;
+  color: #fcefc7;
+  margin-bottom: 6px;
+}
+
+.options strong {
+  color: #fff;
+}
+
+/* FOOTER */
 .footer {
-  background-color: #990000; /* Vermelho Escuro */
-  color: white;
+  background: rgba(153, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fffbe6;
   text-align: center;
   padding: 15px;
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-size: 14px;
+  height: 60px;
+  font-size: 15px;
+  z-index: 10;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
 }

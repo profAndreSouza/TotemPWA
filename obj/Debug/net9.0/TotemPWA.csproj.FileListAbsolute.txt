@@ -91,4 +91,5 @@ C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\refint\TotemPWA.dll
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\TotemPWA.pdb
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\TotemPWA.genruntimeconfig.cache
 C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\ref\TotemPWA.dll
-C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\compressed\5x7mdqe4nv-r6z5tt14hb.gz
+C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\compressed\bzg5unsbx8-s1ogk6kmj6.gz
+C:\projects\FATEC\TotemPWA\obj\Debug\net9.0\compressed\5x7mdqe4nv-py2nmlsxcu.gz
