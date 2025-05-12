@@ -14,14 +14,11 @@
 
 <body>
 
-    <!-- HEADER -->
     <div class="header">
         <img src="~/img/logotipo.jpeg" alt="Logo do Restaurante">
     </div>
 
-    <!-- ÁREA PRINCIPAL DIVIDIDA -->
     <div class="main-content">
-        <!-- MENU LATERAL -->
         <div class="sidebar">
             @foreach (var category in ViewBag.Categories)
             {
@@ -33,9 +30,7 @@
             }
         </div>
 
-        <!-- CONTAINER GERAL -->
         <div class="menu-section">
-            <!-- SUBCATEGORIAS (em cima) -->
             <div class="subcategory-bar">
                 @foreach (var subcategory in ViewBag.SubCategories)
                 {
@@ -46,7 +41,6 @@
                 }
             </div>
 
-            <!-- ITENS DO CARDÁPIO (abaixo) -->
             <div class="menu-container">
                 
                 @foreach (var product in ViewBag.Products)
@@ -68,7 +62,6 @@
 
     </div>
 
-    <!-- FOOTER -->
     <div class="footer">
         <p>Total do Pedido: <strong>R$ 0,00</strong></p>
     </div>
