@@ -44,6 +44,48 @@ Se você quiser acessar os produtos dessa categoria via URL, uma rota como:
 
 ---
 
+### `Category.cs`
+
+```csharp
+using System.Text.RegularExpressions;
+
+public class Category
+{
+    public int Id { get; set; }
+
+    private string _name;
+
+    public required string Name
+    {
+        get => _name;
+        set
+        {
+            _name = value;
+            Slug = GenerateSlug(value);
+        }
+    }
+
+    public string Slug { get; set; }
+
+    private string GenerateSlug(string text)
+    {
+        text = text.ToLowerInvariant().Trim();                         // Converte para minúsculas e remove espaços no início/fim
+        text = Regex.Replace(text, @"[^a-z0-9\s-]", "");               // Remove caracteres especiais
+        text = Regex.Replace(text, @"\s+", "-");                       // Substitui espaços por hífens
+        text = Regex.Replace(text, @"-+", "-");                        // Remove múltiplos hífens consecutivos
+        return text;
+    }
+}
+```
+
+### Exemplo de uso
+
+```csharp
+var category = new Category { Name = "Refrigerantes & Bebidas" };
+Console.WriteLine(category.Slug); // Saída: "refrigerantes-bebidas"
+```
+
+
 ## O que são *Seeders*
 
 ### Definição:
@@ -154,5 +196,3 @@ namespace TotemPWA.Data
 * **Slug**: string legível usada em URLs, como `"csharp-burger"` ao invés de `"C# Burger"`.
 * **Seeder**: rotina para popular automaticamente o banco de dados com dados iniciais.
 * O método `InitializeAsync` carrega dados de um arquivo JSON e usa o método recursivo `CreateCategoryRecursiveAsync` para inserir categorias, produtos e variações no banco de dados de forma organizada.
-
-Gostaria que eu gerasse um exemplo de como criar automaticamente slugs nas entidades?
