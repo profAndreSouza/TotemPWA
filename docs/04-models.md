@@ -30,142 +30,89 @@ Este módulo define as entidades principais usadas no sistema do Totem Interativ
 ### Classe `Category`
 
 ```csharp
+// Define a entidade Categoria, que pode ter subcategorias e produtos.
 public class Category
+{
+    // Identificador único da categoria (chave primária).
+    public int Id { get; set; }
+
+    // Nome da categoria (obrigatório).
+    public required string Name { get; set; }
+
+    // Referência opcional à categoria pai.
+    public int? ParentCategoryId { get; set; }
+
+    // Objeto da categoria pai. Ignorado no JSON para evitar loops de serialização.
+    [JsonIgnore]
+    public Category? ParentCategory { get; set; }
+
+    // Lista de subcategorias relacionadas a esta categoria.
+    public ICollection<Category> Subcategories { get; set; } = new List<Category>();
+
+    // Lista de produtos que pertencem a esta categoria.
+    public ICollection<Product> Products { get; set; } = new List<Product>();
+}
 ```
-
-Define a entidade **Categoria**, usada para organizar produtos de forma hierárquica.
-
-> Exemplifica **composição** em OOP, pois contém subcategorias e produtos.
-
-```csharp
-public int Id { get; set; }
-```
-
-Identificador único da categoria (chave primária).
-
-```csharp
-public required string Name { get; set; }
-```
-
-Nome da categoria. A anotação `required` indica que o valor é obrigatório (C# 11+).
-
-```csharp
-public int? ParentCategoryId { get; set; }
-```
-
-Referência opcional à categoria pai (categoria hierarquicamente superior).
-
-```csharp
-[JsonIgnore]
-public Category? ParentCategory { get; set; }
-```
-
-Objeto que representa a categoria pai. A anotação `[JsonIgnore]` evita que essa propriedade seja serializada em JSON (ex: para prevenir loops).
-
-```csharp
-public ICollection<Category> Subcategories { get; set; } = new List<Category>();
-```
-
-Lista de subcategorias associadas a esta categoria. Inicializada como lista vazia.
-
-```csharp
-public ICollection<Product> Products { get; set; } = new List<Product>();
-```
-
-Lista de produtos associados diretamente a esta categoria. Também inicializada como lista vazia.
 
 ---
 
 ### Classe `Product`
 
 ```csharp
+// Define a entidade Produto, que pertence a uma categoria e pode ter variações.
 public class Product
+{
+    // Identificador único do produto.
+    public int Id { get; set; }
+
+    // Nome do produto (obrigatório).
+    public required string Name { get; set; }
+
+    // Preço base do produto (sem adicionais).
+    public decimal Price { get; set; }
+
+    // Chave estrangeira para a categoria associada.
+    public int CategoryId { get; set; }
+
+    // Objeto da categoria associada. Ignorado no JSON para evitar recursão.
+    [JsonIgnore]
+    public Category? Category { get; set; }
+
+    // Lista de variações possíveis para o produto.
+    public ICollection<Variation> Variations { get; set; } = new List<Variation>();
+}
 ```
-
-Define a entidade **Produto**, representando um item comercializável no sistema.
-
-```csharp
-public int Id { get; set; }
-```
-
-Identificador único do produto.
-
-```csharp
-public required string Name { get; set; }
-```
-
-Nome do produto. Também obrigatório.
-
-```csharp
-public decimal Price { get; set; }
-```
-
-Preço base do produto (sem variações).
-
-```csharp
-public int CategoryId { get; set; }
-```
-
-Chave estrangeira que relaciona o produto à sua categoria.
-
-```csharp
-[JsonIgnore]
-public Category? Category { get; set; }
-```
-
-Objeto da categoria associada ao produto. Ignorado na serialização JSON.
-
-```csharp
-public ICollection<Variation> Variations { get; set; } = new List<Variation>();
-```
-
-Lista de variações disponíveis para este produto (ex: tamanhos, adicionais). Inicializada vazia.
 
 ---
 
 ### Classe `Variation`
 
 ```csharp
+// Define a entidade Variação, que representa um complemento ou versão do produto.
 public class Variation
+{
+    // Identificador único da variação.
+    public int Id { get; set; }
+
+    // Descrição da variação (ex: "Grande", "Extra Bacon").
+    public required string Description { get; set; }
+
+    // Preço adicional cobrado por essa variação.
+    public decimal AdditionalPrice { get; set; }
+
+    // Chave estrangeira para o produto relacionado.
+    public int ProductId { get; set; }
+
+    // Objeto do produto associado. Ignorado na serialização JSON.
+    [JsonIgnore]
+    public Product Product { get; set; }
+}
 ```
-
-Define a entidade **Variação**, usada para representar diferentes versões de um produto.
-
-```csharp
-public int Id { get; set; }
-```
-
-Identificador único da variação.
-
-```csharp
-public required string Description { get; set; }
-```
-
-Descrição da variação (ex: "Tamanho Grande", "Extra Bacon").
-
-```csharp
-public decimal AdditionalPrice { get; set; }
-```
-
-Preço adicional cobrado por esta variação.
-
-```csharp
-public int ProductId { get; set; }
-```
-
-Chave estrangeira que associa a variação ao seu produto principal.
-
-```csharp
-[JsonIgnore]
-public Product Product { get; set; }
-```
-
-Objeto do produto relacionado a esta variação. Também ignorado na serialização JSON.
 
 ---
 
 ## Observações
 
-* As anotações `[JsonIgnore]` são utilizadas para evitar ciclos de referência durante a serialização, especialmente útil ao retornar os dados por uma API.
-* O uso de `required` impõe regras de validação para propriedades obrigatórias na criação de objetos.
-* As listas (`ICollection<T>`) são inicializadas no momento da declaração para evitar erros de referência nula.
+* As anotações `[JsonIgnore]` são utilizadas para evitar ciclos de referência durante a serialização, especialmente útil em APIs REST.
+* O uso de `required` (disponível a partir do C# 11) assegura que os campos obrigatórios sejam fornecidos na criação de objetos.
+* As listas são inicializadas diretamente nas propriedades para evitar exceções de referência nula.
