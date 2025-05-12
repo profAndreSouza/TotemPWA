@@ -44,7 +44,7 @@ Se você quiser acessar os produtos dessa categoria via URL, uma rota como:
 
 ---
 
-### `Category.cs`
+### Exemplo Model `Category.cs`
 
 ```csharp
 using System.Text.RegularExpressions;
@@ -77,8 +77,6 @@ public class Category
     }
 }
 ```
-
-### Exemplo de uso
 
 ```csharp
 var category = new Category { Name = "Refrigerantes & Bebidas" };
