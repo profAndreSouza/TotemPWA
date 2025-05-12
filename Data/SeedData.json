@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Lanches",
+    "subcategories": [
+      {
+        "name": "Burgers",
+        "products": [
+          {
+            "name": "Cheeseburger",
+            "price": 15.00,
+            "variations": [
+              { "description": "Extra Queijo", "additionalPrice": 2.00 },
+              { "description": "Pão sem gergelim", "additionalPrice": 0.00 }
+            ]
+          },
+          {
+            "name": "X-Bacon",
+            "price": 18.50,
+            "variations": [
+              { "description": "Bacon crocante", "additionalPrice": 2.50 },
+              { "description": "Sem cebola", "additionalPrice": 0.00 }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sanduíches Naturais",
+        "products": [
+          {
+            "name": "Frango com Creme",
+            "price": 12.00,
+            "variations": [
+              { "description": "Pão integral", "additionalPrice": 1.00 }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bebidas",
+    "subcategories": [
+      {
+        "name": "Refrigerantes",
+        "products": [
+          {
+            "name": "Coca-Cola Lata",
+            "price": 6.00,
+            "variations": [
+              { "description": "Com gelo", "additionalPrice": 0.00 },
+              { "description": "Sem gelo", "additionalPrice": 0.00 }
+            ]
+          },
+          {
+            "name": "Guaraná Antárctica Lata",
+            "price": 5.50,
+            "variations": []
+          }
+        ]
+      },
+      {
+        "name": "Sucos Naturais",
+        "products": [
+          {
+            "name": "Suco de Laranja",
+            "price": 7.00,
+            "variations": [
+              { "description": "Com açúcar", "additionalPrice": 0.00 },
+              { "description": "Sem açúcar", "additionalPrice": 0.00 }
+            ]
+          },
+          {
+            "name": "Suco de Abacaxi com Hortelã",
+            "price": 7.50,
+            "variations": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sobremesas",
+    "subcategories": [
+      {
+        "name": "Diversos",
+        "products": [
+          {
+            "name": "Pudim",
+            "price": 8.00,
+            "variations": []
+          },
+          {
+            "name": "Brownie com Sorvete",
+            "price": 10.00,
+            "variations": [
+              { "description": "Sorvete de creme", "additionalPrice": 0.00 },
+              { "description": "Sorvete de chocolate", "additionalPrice": 1.00 }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

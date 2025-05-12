@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TotemPWA.Models;
 
-namespace TotemPWA.Models
+namespace TotemPWA.Data
 {
     public class ApplicationDbContext : DbContext
     {
@@ -22,19 +22,28 @@ namespace TotemPWA.Models
                 .HasOne(c => c.ParentCategory)
                 .WithMany(c => c.Subcategories)
                 .HasForeignKey(c => c.ParentCategoryId)
-                .OnDelete(DeleteBehavior.SetNull);  // Allow parent category to be null
+                .OnDelete(DeleteBehavior.NoAction);  // Allow parent category to be null
 
             // Define 1-to-many relationship between Product and Category
             modelBuilder.Entity<Product>()
                 .HasOne(p => p.Category)
                 .WithMany(c => c.Products)
-                .HasForeignKey(p => p.CategoryId);
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Define 1-to-many relationship between Product and Variation
             modelBuilder.Entity<Variation>()
                 .HasOne(v => v.Product)
                 .WithMany(p => p.Variations)
                 .HasForeignKey(v => v.ProductId);
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Price)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Variation>()
+                .Property(v => v.AdditionalPrice)
+                .HasColumnType("decimal(18,2)");
+
         }
     }
 }

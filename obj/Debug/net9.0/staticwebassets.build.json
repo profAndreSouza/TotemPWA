@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "c0SS1xUrcYFBbHU9Oi2aAnET8FEJCXuGVJ/g6hZVfhc=",
+  "Hash": "d9RYMq+h4IndwLZ2laGURZJ36mrTJd+tE/N0QBLfoZQ=",
   "Source": "TotemPWA",
   "BasePath": "_content/TotemPWA",
   "Mode": "Default",
@@ -185,12 +185,12 @@
       "OriginalItemSpec": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-py2nmlsxcu.gz",
+      "Identity": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-2opifeehrx.gz",
       "SourceId": "TotemPWA",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/TotemPWA",
-      "RelativePath": "css/site#[.{fingerprint=py2nmlsxcu}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=2opifeehrx}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -199,8 +199,8 @@
       "RelatedAsset": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "2iq6qz25xx",
-      "Integrity": "Vg5y49amWs2wDaSnXZEGqNsCTa2hdiGA6cs/jlPLB00=",
+      "Fingerprint": "oacpsbjibe",
+      "Integrity": "gJ0pvzQ2DsnkWacap5IfESWRmnjMc1F244vnREtPO6E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css"
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "py2nmlsxcu",
-      "Integrity": "wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg=",
+      "Fingerprint": "2opifeehrx",
+      "Integrity": "jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -3026,13 +3026,13 @@
       ]
     },
     {
-      "Route": "css/site.css",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-py2nmlsxcu.gz",
+      "Route": "css/site.2opifeehrx.css",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-2opifeehrx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000738007380"
+          "Quality": "0.000789889415"
         }
       ],
       "ResponseHeaders": [
@@ -3042,19 +3042,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1354"
+          "Value": "1265"
         },
         {
           "Name": "ETag",
-          "Value": "\"Vg5y49amWs2wDaSnXZEGqNsCTa2hdiGA6cs/jlPLB00=\""
+          "Value": "\"gJ0pvzQ2DsnkWacap5IfESWRmnjMc1F244vnREtPO6E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 18:45:36 GMT"
+          "Value": "Mon, 12 May 2025 13:29:27 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -3070,18 +3070,26 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg=\""
+          "Value": "W/\"jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "2opifeehrx"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg="
+          "Value": "sha256-jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0="
         }
       ]
     },
     {
-      "Route": "css/site.css",
+      "Route": "css/site.2opifeehrx.css",
       "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3091,7 +3099,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4313"
+          "Value": "4909"
         },
         {
           "Name": "Content-Type",
@@ -3099,121 +3107,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg=\""
+          "Value": "\"jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 18:45:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-py2nmlsxcu.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1354"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Vg5y49amWs2wDaSnXZEGqNsCTa2hdiGA6cs/jlPLB00=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 18:45:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Vg5y49amWs2wDaSnXZEGqNsCTa2hdiGA6cs/jlPLB00="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.py2nmlsxcu.css",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-py2nmlsxcu.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000738007380"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1354"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Vg5y49amWs2wDaSnXZEGqNsCTa2hdiGA6cs/jlPLB00=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 18:45:36 GMT"
+          "Value": "Mon, 12 May 2025 13:29:27 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "py2nmlsxcu"
+          "Value": "2opifeehrx"
         },
         {
           "Name": "label",
@@ -3221,13 +3129,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg="
+          "Value": "sha256-jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0="
         }
       ]
     },
     {
-      "Route": "css/site.py2nmlsxcu.css",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css",
+      "Route": "css/site.2opifeehrx.css.gz",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-2opifeehrx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3236,7 +3144,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4313"
+          "Value": "1265"
         },
         {
           "Name": "Content-Type",
@@ -3244,56 +3152,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg=\""
+          "Value": "\"gJ0pvzQ2DsnkWacap5IfESWRmnjMc1F244vnREtPO6E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 18:45:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "py2nmlsxcu"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-wbizl58/Pf9JN38pxMuJCM785teQ78UZBCY2WZG+Oxg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.py2nmlsxcu.css.gz",
-      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-py2nmlsxcu.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1354"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Vg5y49amWs2wDaSnXZEGqNsCTa2hdiGA6cs/jlPLB00=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Mon, 07 Apr 2025 18:45:36 GMT"
+          "Value": "Mon, 12 May 2025 13:29:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3311,7 +3174,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "py2nmlsxcu"
+          "Value": "2opifeehrx"
         },
         {
           "Name": "label",
@@ -3319,7 +3182,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Vg5y49amWs2wDaSnXZEGqNsCTa2hdiGA6cs/jlPLB00="
+          "Value": "sha256-gJ0pvzQ2DsnkWacap5IfESWRmnjMc1F244vnREtPO6E="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-2opifeehrx.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000789889415"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1265"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gJ0pvzQ2DsnkWacap5IfESWRmnjMc1F244vnREtPO6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 12 May 2025 13:29:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4909"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 12 May 2025 13:29:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jiYZ3+iOMzb98tTMUR7+iIuUNmMnZH+x39RclunidY0="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "C:\\projects\\FATEC\\TotemPWA\\obj\\Debug\\net9.0\\compressed\\5x7mdqe4nv-2opifeehrx.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1265"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gJ0pvzQ2DsnkWacap5IfESWRmnjMc1F244vnREtPO6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 12 May 2025 13:29:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gJ0pvzQ2DsnkWacap5IfESWRmnjMc1F244vnREtPO6E="
         }
       ]
     },

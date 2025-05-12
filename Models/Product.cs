@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace TotemPWA.Models
 {
     public class Product
@@ -6,11 +8,12 @@ namespace TotemPWA.Models
         public required string Name { get; set; }
         public decimal Price { get; set; }
 
-        // 1-to-many relationship with categories
         public int CategoryId { get; set; }
-        public required Category Category { get; set; }
-
-        // 1-to-many relationship with variations
+        
+        [JsonIgnore]
+        public Category? Category { get; set; }
         public ICollection<Variation> Variations { get; set; } = new List<Variation>();
     }
 }
+
+

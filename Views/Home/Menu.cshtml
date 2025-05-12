@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="icon" type="image/png" href="~/img/favicon.png" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <img src="~/img/logotipo.jpeg" alt="Logo do Restaurante">
+    </div>
+
+    <!-- ÁREA PRINCIPAL DIVIDIDA -->
+    <div class="main-content">
+        <!-- MENU LATERAL -->
+        <div class="sidebar">
+            @foreach (var category in ViewBag.Categories)
+            {
+                string activeClass = category.active ? "active" : "";
+                <a href="/Menu/@category.id" class="category-btn @activeClass">
+                    <span class="icon">🍕</span>
+                    <span class="label">@category.name</span>
+                </a>
+            }
+        </div>
+
+        <!-- CONTAINER GERAL -->
+        <div class="menu-section">
+            <!-- SUBCATEGORIAS (em cima) -->
+            <div class="subcategory-bar">
+                @foreach (var subcategory in ViewBag.SubCategories)
+                {
+                    string activeClass = subcategory.active ? "active" : "";
+                    <a href="/Menu/@ViewBag.Category/@subcategory.id" class="subcategory-btn @activeClass">
+                        <span class="label">@subcategory.name</span>
+                    </a>
+                }
+            </div>
+
+            <!-- ITENS DO CARDÁPIO (abaixo) -->
+            <div class="menu-container">
+                
+                @foreach (var product in ViewBag.Products)
+                {
+                    <div class="menu-item">
+                        <img src="https://fakeimg.pl/60x60/?retina=1&text=%F0%9F%8D%95" alt="@product.name">
+                        <div class="options">
+                            <h3>@product.name</h3>
+                            <p>Descrição</p>
+                            <strong>@product.price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"))</strong>
+                        </div>
+                    </div>
+                }
+                
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p>Total do Pedido: <strong>R$ 0,00</strong></p>
+    </div>
+
+</body>
+</html>

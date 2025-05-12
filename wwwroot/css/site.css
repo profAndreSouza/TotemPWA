@@ -1,11 +1,9 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BODY com formas livres e vidro fosco */
 body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
@@ -42,7 +40,6 @@ body::after {
   right: -100px;
 }
 
-/* HEADER */
 .header {
   background: rgba(153, 0, 0, 0.8);
   backdrop-filter: blur(10px);
@@ -74,7 +71,6 @@ body::after {
   z-index: 1;
 }
 
-/* SIDEBAR FIXA À ESQUERDA */
 .sidebar {
   position: fixed;
   top: 200px;
@@ -96,39 +92,89 @@ body::after {
   background-color: #ff7043;
   border: none;
   color: white;
-  padding: 12px 10px;
+  padding: 16px 12px;
   border-radius: 10px;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease;
-  text-align: left;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.category-btn .icon {
+  font-size: 36px;
+}
+
+.category-btn .label {
+  font-size: 14px;
 }
 
 .category-btn:hover {
   background-color: #ff5722;
 }
 
-/* MENU */
+.subcategory-bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 12px;
+  padding: 8px;
+  position: sticky;
+  top: 200px;
+  z-index: 6;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 112, 67, 0.8) rgba(255, 255, 255, 0.05);
+}
+
+.subcategory-btn {
+  background-color: #ff7043;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+  flex: 0 0 auto;
+  text-decoration: none;
+}
+
+.subcategory-btn:hover,
+.subcategory-btn.active {
+  background-color: #ff5722;
+}
+
+.menu-section {
+  position: fixed;
+  top: 200px;
+  bottom: 60px;
+  left: 150px;
+  right: 0;
+}
+
 .menu-container {
   flex: 1;
   margin: 0;
   padding: 20px;
-  margin-left: 0px;
-  margin-top: 80px; 
-  margin-bottom: 60px; 
   overflow-y: auto;
-  max-height: calc(100vh - 260px);
+  max-height: calc(100vh - 320px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   z-index: 1;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 112, 67, 0.8) rgba(255, 255, 255, 0.05);
 }
 
-/* Estiliza a barra de rolagem para WebKit (Chrome, Edge, Safari) */
 .menu-container::-webkit-scrollbar {
   width: 10px;
 }
@@ -139,15 +185,14 @@ body::after {
 }
 
 .menu-container::-webkit-scrollbar-thumb {
-  background: rgba(255, 112, 67, 0.8); /* cor laranja translúcida */
+  background: rgba(255, 112, 67, 0.8);
   border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.1); /* efeito de contorno */
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .menu-container::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 87, 34, 1); /* cor mais intensa no hover */
+  background: rgba(255, 87, 34, 1);
 }
-
 
 .menu-container h1 {
   font-size: 28px;
@@ -156,7 +201,6 @@ body::after {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* ITEM */
 .menu-item {
   display: flex;
   align-items: center;
@@ -165,8 +209,7 @@ body::after {
   -webkit-backdrop-filter: blur(8px);
   padding: 16px 20px;
   margin-bottom: 18px;
-  width: 90%;
-  max-width: 500px;
+  width: 95%;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border-left: 6px solid #FF5B00;
@@ -202,7 +245,6 @@ body::after {
   color: #fff;
 }
 
-/* FOOTER */
 .footer {
   background: rgba(153, 0, 0, 0.8);
   backdrop-filter: blur(10px);
