@@ -1,16 +1,16 @@
-# Conceitos de OOP: Acoplamento, Encapsulamento e Injeção de Dependência
+# Conceitos de OOP na Prática com ASP.NET Core MVC
 
-## Encapsulamento
+## 1. **Encapsulamento**
 
-**Encapsulamento** é o princípio de esconder os detalhes internos de uma classe e expor apenas o que é necessário para seu uso externo.
+Encapsulamento é a prática de esconder os detalhes internos de uma classe, expondo apenas o necessário.
 
-### Benefícios:
+### Vantagens:
 
 * Protege o estado interno do objeto.
-* Reduz efeitos colaterais de modificações.
-* Permite controle sobre acesso e validação.
+* Controla o acesso e garante validação.
+* Reduz efeitos colaterais externos.
 
-### Exemplo:
+### Exemplo prático:
 
 ```csharp
 public class Produto
@@ -29,20 +29,20 @@ public class Produto
 }
 ```
 
-Neste exemplo, o campo `_preco` só pode ser modificado por meio da **propriedade** `Preco`, que impõe regras.
+Aplicado também no `Controller`, onde o campo `_context` encapsula o acesso ao banco de dados.
 
 ---
 
-## Acoplamento
+## 2. **Acoplamento**
 
-**Acoplamento** refere-se ao **nível de dependência entre módulos/classes**. Quanto mais uma classe depende diretamente de outra, maior o acoplamento.
+Refere-se ao grau de dependência entre classes.
 
 ### Tipos:
 
-* **Acoplamento forte (tight coupling)**: difícil de manter, testar e reutilizar.
-* **Acoplamento fraco (loose coupling)**: mais flexível, facilita manutenção e testes.
+* **Forte (tight coupling):** classes altamente dependentes — difícil de manter e testar.
+* **Fraco (loose coupling):** menor dependência — facilita a manutenção, reuso e testes.
 
-### Exemplo de acoplamento forte:
+### Exemplo com acoplamento forte:
 
 ```csharp
 public class PedidoService
@@ -51,7 +51,7 @@ public class PedidoService
 }
 ```
 
-### Exemplo com acoplamento fraco:
+### Exemplo com acoplamento fraco (ideal):
 
 ```csharp
 public class PedidoService
@@ -65,17 +65,17 @@ public class PedidoService
 }
 ```
 
-Ao usar uma **interface**, o `PedidoService` não depende de uma implementação concreta — apenas do contrato. Isso reduz o acoplamento.
+O uso de **interfaces** reduz o acoplamento e favorece testes com mocks.
 
 ---
 
-## Injeção de Dependência (DI)
+## 3. **Injeção de Dependência (DI)**
 
-**Injeção de Dependência** é uma técnica para **fornecer dependências de uma classe a partir de fora**, geralmente via **construtor**.
+É a técnica de fornecer dependências externas para uma classe — normalmente via construtor.
 
-> Em ASP.NET Core, isso é feito automaticamente pelo **container de injeção de dependência**.
+### ASP.NET Core:
 
-### Exemplo real:
+O framework gerencia isso automaticamente via container de serviços.
 
 ```csharp
 public class HomeController : Controller
@@ -91,19 +91,60 @@ public class HomeController : Controller
 }
 ```
 
-* O `HomeController` não cria suas próprias dependências.
-* O **framework** (através do container de DI) injeta o `ILogger` e o `ApplicationDbContext`.
-* Isso permite **injeção de mocks** em testes, maior **reutilização** e menor **acoplamento**.
+Reduz acoplamento, melhora testes unitários e segue o princípio da **Inversão de Controle (IoC)**.
 
 ---
 
-## Vantagens combinadas
+## 4. **Abstração**
 
-| Conceito                   | Vantagem prática                                |
-| -------------------------- | ----------------------------------------------- |
-| **Encapsulamento**         | Segurança e controle sobre o estado dos objetos |
-| **Acoplamento fraco**      | Maior flexibilidade e facilidade de manutenção  |
-| **Injeção de Dependência** | Testes unitários fáceis e maior modularidade    |
+Permite representar conceitos complexos de forma simplificada.
+
+### Exemplo:
+
+Controllers utilizam abstrações:
+
+* `ILogger` (sem saber como ele grava logs).
+* `DbContext` (sem saber como o banco armazena dados).
+
+---
+
+## 5. **Herança**
+
+Permite que uma classe herde comportamentos de outra.
+
+```csharp
+public class CategoryController : ControllerBase
+```
+
+`CategoryController` herda de `ControllerBase`, ganhando métodos como `Ok()`, `BadRequest()`, etc.
+
+---
+
+## 6. **Polimorfismo**
+
+Permite que métodos tenham comportamentos diferentes dependendo do contexto.
+
+### Exemplo:
+
+```csharp
+return Ok(produto);
+return NotFound();
+```
+
+`Ok()` e `NotFound()` são métodos herdados que retornam diferentes tipos de resposta HTTP.
+
+---
+
+## **Resumo: Vantagens Combinadas da OOP com ASP.NET Core**
+
+| Conceito                   | Aplicação prática                                  |
+| -------------------------- | -------------------------------------------------- |
+| **Encapsulamento**         | Protege dados no banco, regras nos models          |
+| **Abstração**              | Usa interfaces, logger e DbContext sem detalhes    |
+| **Herança**                | Controllers herdam de ControllerBase ou Controller |
+| **Polimorfismo**           | Métodos como `Ok()`, `BadRequest()` etc.           |
+| **Acoplamento Fraco**      | Controllers não conhecem detalhes das dependências |
+| **Injeção de Dependência** | Permite testes e modularização                     |
 
 ---
 
@@ -247,33 +288,13 @@ public class HomeController : Controller
 
 ---
 
-## Observações Finais
+## Observações
 
 * O padrão `MVC` facilita a separação de responsabilidades: lógica no Controller, dados no Model, interface na View.
 * A injeção de dependência torna o código mais testável e desacoplado.
 * `ViewBag` é uma forma dinâmica de passar dados da controller para a view (não tipada).
 * O uso de `async/await` permite que o sistema responda a múltiplas requisições de forma eficiente (programação assíncrona).
 * A rota `[HttpGet("Menu/{categoryId:int?}/{subcategoryId:int?}")]` facilita URLs amigáveis.
-
----
-
-# **Conceitos de Orientação a Objetos Abordados Aqui**
-
-### **Abstração**
-
-> Isola a complexidade interna de uma classe, expondo apenas o necessário. Por exemplo, os controllers não precisam conhecer como o banco de dados funciona, apenas usam os métodos fornecidos.
-
-### **Polimorfismo**
-
-> A classe `ControllerBase` permite o uso de métodos como `Ok()`, `NotFound()`, `BadRequest()` que retornam diferentes respostas HTTP — o comportamento muda conforme o contexto.
-
-### **Herança**
-
-> `CategoryController` e `ProductController` **herdam** de `ControllerBase`, ganhando funcionalidades básicas de API como retorno de ações HTTP.
-
-### **Encapsulamento**
-
-> O acesso ao banco via `_context` está encapsulado no Controller, restringindo o escopo da manipulação de dados a um local central.
 
 ---
 
@@ -461,4 +482,3 @@ namespace TotemPWA.Controllers
     }
 }
 ```
-
