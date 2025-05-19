@@ -30,7 +30,7 @@ using (var scope = app.Services.CreateScope())
     // context.Database.EnsureDeleted(); 
 
     // Aplica as migrações do zero
-    context.Database.Migrate();       
+    // context.Database.Migrate();       
 
     // Executa o Seed (inicialização de dados)
     // await DbInitializer.InitializeAsync(context);

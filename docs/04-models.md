@@ -78,35 +78,6 @@ public class Product
     [JsonIgnore]
     public Category? Category { get; set; }
 
-    // Lista de variações possíveis para o produto.
-    public ICollection<Variation> Variations { get; set; } = new List<Variation>();
-}
-```
-
----
-
-### Classe `Variation`
-
-```csharp
-// Define a entidade Variação, que representa um complemento ou versão do produto.
-public class Variation
-{
-    // Identificador único da variação.
-    public int Id { get; set; }
-
-    // Descrição da variação (ex: "Grande", "Extra Bacon").
-    public required string Description { get; set; }
-
-    // Preço adicional cobrado por essa variação.
-    public decimal AdditionalPrice { get; set; }
-
-    // Chave estrangeira para o produto relacionado.
-    public int ProductId { get; set; }
-
-    // Objeto do produto associado. Ignorado na serialização JSON.
-    [JsonIgnore]
-    public Product Product { get; set; }
-}
 ```
 
 ---

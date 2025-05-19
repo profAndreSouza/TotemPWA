@@ -11,7 +11,6 @@ namespace TotemPWA.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<Variation> Variations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -31,17 +30,8 @@ namespace TotemPWA.Data
                 .HasForeignKey(p => p.CategoryId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Define 1-to-many relationship between Product and Variation
-            modelBuilder.Entity<Variation>()
-                .HasOne(v => v.Product)
-                .WithMany(p => p.Variations)
-                .HasForeignKey(v => v.ProductId);
             modelBuilder.Entity<Product>()
                 .Property(p => p.Price)
-                .HasColumnType("decimal(18,2)");
-
-            modelBuilder.Entity<Variation>()
-                .Property(v => v.AdditionalPrice)
                 .HasColumnType("decimal(18,2)");
 
         }

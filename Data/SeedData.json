@@ -1,102 +1,282 @@
 [
   {
     "name": "Lanches",
+    "icon": "https://img.icons8.com/emoji/48/hamburger-emoji.png",
     "subcategories": [
       {
-        "name": "Burgers",
+        "name": "Code Burgers",
+        "icon": "https://img.icons8.com/color/48/hamburger.png",
         "products": [
-          {
-            "name": "Cheeseburger",
-            "price": 15.00,
-            "variations": [
-              { "description": "Extra Queijo", "additionalPrice": 2.00 },
-              { "description": "Pão sem gergelim", "additionalPrice": 0.00 }
-            ]
-          },
-          {
-            "name": "X-Bacon",
-            "price": 18.50,
-            "variations": [
-              { "description": "Bacon crocante", "additionalPrice": 2.50 },
-              { "description": "Sem cebola", "additionalPrice": 0.00 }
-            ]
-          }
+          { "name": "C# Burger", "price": 18.50 },
+          { "name": "Java Deluxe", "price": 19.90 },
+          { "name": "Python Smash", "price": 17.50 },
+          { "name": "Rusty Double", "price": 20.00 },
+          { "name": "Go Stack", "price": 18.00 }
         ]
       },
       {
-        "name": "Sanduíches Naturais",
+        "name": "Dev Dogs",
+        "icon": "https://img.icons8.com/color/48/hot-dog.png",
         "products": [
-          {
-            "name": "Frango com Creme",
-            "price": 12.00,
-            "variations": [
-              { "description": "Pão integral", "additionalPrice": 1.00 }
-            ]
-          }
+          { "name": "React Dog", "price": 14.00 },
+          { "name": "Vue Sausage", "price": 13.50 },
+          { "name": "Angular Dog", "price": 14.50 },
+          { "name": "Svelte Dog", "price": 13.00 }
+        ]
+      },
+      {
+        "name": "Natural Bits",
+        "icon": "https://img.icons8.com/color/48/salad.png",
+        "products": [
+          { "name": "HTML Veggie", "price": 12.00 },
+          { "name": "CSS Light", "price": 12.50 },
+          { "name": "API Chicken", "price": 13.00 },
+          { "name": "JSON Wrap", "price": 11.50 }
+        ]
+      },
+      {
+        "name": "Toasts do Terminal",
+        "icon": "https://img.icons8.com/color/48/toast.png",
+        "products": [
+          { "name": "Bash Toast", "price": 10.00 },
+          { "name": "Zsh Queijo", "price": 10.50 },
+          { "name": "CMD Bacon", "price": 11.00 },
+          { "name": "PowerShell Frango", "price": 11.50 }
+        ]
+      },
+      {
+        "name": "Combos Full Stack",
+        "icon": "https://img.icons8.com/color/48/combo-chart--v1.png",
+        "products": [
+          { "name": "Frontend Combo", "price": 25.00 },
+          { "name": "Backend Combo", "price": 26.50 },
+          { "name": "Full Stack Monster", "price": 28.00 },
+          { "name": "DevOps Meal", "price": 27.00 },
+          { "name": "Bug Hunter Combo", "price": 24.00 }
         ]
       }
     ]
   },
   {
     "name": "Bebidas",
+    "icon": "https://img.icons8.com/emoji/48/beverage-box-emoji.png",
     "subcategories": [
       {
         "name": "Refrigerantes",
+        "icon": "https://img.icons8.com/color/48/soda.png",
         "products": [
-          {
-            "name": "Coca-Cola Lata",
-            "price": 6.00,
-            "variations": [
-              { "description": "Com gelo", "additionalPrice": 0.00 },
-              { "description": "Sem gelo", "additionalPrice": 0.00 }
-            ]
-          },
-          {
-            "name": "Guaraná Antárctica Lata",
-            "price": 5.50,
-            "variations": []
-          }
+          { "name": "Pepsi", "price": 5.00 },
+          { "name": "Coca-Cola", "price": 5.50 },
+          { "name": "Guaraná", "price": 5.50 },
+          { "name": "Fanta Laranja", "price": 6.00 }
+        ]
+      },
+      {
+        "name": "Cafés",
+        "icon": "https://img.icons8.com/color/48/coffee-to-go.png",
+        "products": [
+          { "name": "Café Espresso", "price": 7.00 },
+          { "name": "Latte", "price": 8.00 },
+          { "name": "Mocha", "price": 8.50 },
+          { "name": "Café com Leite", "price": 7.50 }
         ]
       },
       {
         "name": "Sucos Naturais",
+        "icon": "https://img.icons8.com/color/48/orange-juice.png",
         "products": [
-          {
-            "name": "Suco de Laranja",
-            "price": 7.00,
-            "variations": [
-              { "description": "Com açúcar", "additionalPrice": 0.00 },
-              { "description": "Sem açúcar", "additionalPrice": 0.00 }
-            ]
-          },
-          {
-            "name": "Suco de Abacaxi com Hortelã",
-            "price": 7.50,
-            "variations": []
-          }
+          { "name": "Suco de Laranja", "price": 7.00 },
+          { "name": "Suco de Limão", "price": 7.50 },
+          { "name": "Suco de Maracujá", "price": 8.00 },
+          { "name": "Suco de Hortelã", "price": 7.20 }
+        ]
+      },
+      {
+        "name": "Milkshakes",
+        "icon": "https://img.icons8.com/color/48/milkshake.png",
+        "products": [
+          { "name": "Shake Chocolate", "price": 10.00 },
+          { "name": "Shake Morango", "price": 9.50 },
+          { "name": "Shake Baunilha", "price": 10.50 },
+          { "name": "Shake Ovomaltine", "price": 11.00 }
+        ]
+      },
+      {
+        "name": "Chás",
+        "icon": "https://img.icons8.com/color/48/tea.png",
+        "products": [
+          { "name": "Chá de Camomila", "price": 6.50 },
+          { "name": "Chá de Hortelã", "price": 6.00 },
+          { "name": "Chá Preto", "price": 7.00 },
+          { "name": "Chá Verde", "price": 6.80 }
         ]
       }
     ]
   },
   {
     "name": "Sobremesas",
+    "icon": "https://img.icons8.com/color/48/ice-cream-sundae.png",
     "subcategories": [
       {
-        "name": "Diversos",
+        "name": "Doces Clássicos",
+        "icon": "https://img.icons8.com/color/48/cupcake.png",
         "products": [
-          {
-            "name": "Pudim",
-            "price": 8.00,
-            "variations": []
-          },
-          {
-            "name": "Brownie com Sorvete",
-            "price": 10.00,
-            "variations": [
-              { "description": "Sorvete de creme", "additionalPrice": 0.00 },
-              { "description": "Sorvete de chocolate", "additionalPrice": 1.00 }
-            ]
-          }
+          { "name": "Brownie", "price": 9.00 },
+          { "name": "Pudim", "price": 8.50 },
+          { "name": "Torta de Limão", "price": 10.00 },
+          { "name": "Mousse de Chocolate", "price": 9.50 }
+        ]
+      },
+      {
+        "name": "Bolos",
+        "icon": "https://img.icons8.com/color/48/birthday-cake.png",
+        "products": [
+          { "name": "Bolo de Cenoura", "price": 10.00 },
+          { "name": "Bolo de Chocolate", "price": 10.50 },
+          { "name": "Bolo de Fubá", "price": 9.50 },
+          { "name": "Bolo de Morango", "price": 11.00 }
+        ]
+      },
+      {
+        "name": "Sorvetes",
+        "icon": "https://img.icons8.com/color/48/ice-cream-cone.png",
+        "products": [
+          { "name": "Sorvete de Creme", "price": 7.50 },
+          { "name": "Sorvete de Chocolate", "price": 7.00 },
+          { "name": "Sorvete de Morango", "price": 8.00 },
+          { "name": "Sorvete de Flocos", "price": 8.50 }
+        ]
+      },
+      {
+        "name": "Extras",
+        "icon": "https://img.icons8.com/color/48/sprinkles.png",
+        "products": [
+          { "name": "Granulado", "price": 2.00 },
+          { "name": "Chantilly", "price": 2.50 },
+          { "name": "Calda de Chocolate", "price": 2.50 },
+          { "name": "Farofa Doce", "price": 2.00 }
+        ]
+      },
+      {
+        "name": "Combos Doces",
+        "icon": "https://img.icons8.com/color/48/dessert.png",
+        "products": [
+          { "name": "Café & Brownie", "price": 12.00 },
+          { "name": "Chocolate & Bolo", "price": 13.50 },
+          { "name": "Café & Cookie", "price": 11.50 },
+          { "name": "Mousse & Shake", "price": 14.00 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Acompanhamentos",
+    "icon": "https://img.icons8.com/color/48/french-fries.png",
+    "subcategories": [
+      {
+        "name": "Fritas",
+        "icon": "https://img.icons8.com/color/48/french-fries.png",
+        "products": [
+          { "name": "Fritas DevOps", "price": 9.00 },
+          { "name": "Fritas com Bacon JS", "price": 10.00 },
+          { "name": "Fritas com Cheddar PHP", "price": 9.50 },
+          { "name": "Fritas Curly Kotlin", "price": 9.80 }
+        ]
+      },
+      {
+        "name": "Anéis de Cebola",
+        "icon": "https://img.icons8.com/color/48/onion-ring.png",
+        "products": [
+          { "name": "Onion JavaScript", "price": 8.00 },
+          { "name": "Onion Angular", "price": 8.50 },
+          { "name": "Onion React", "price": 9.00 },
+          { "name": "Onion HTML", "price": 8.20 }
+        ]
+      },
+      {
+        "name": "Petiscos de API",
+        "icon": "https://img.icons8.com/color/48/snack.png",
+        "products": [
+          { "name": "API Bites", "price": 7.00 },
+          { "name": "Restful Chips", "price": 6.80 },
+          { "name": "Token Nachos", "price": 7.50 },
+          { "name": "Cookie Crumbs", "price": 6.90 }
+        ]
+      },
+      {
+        "name": "Saladas",
+        "icon": "https://img.icons8.com/color/48/greek-salad.png",
+        "products": [
+          { "name": "Salada JSON", "price": 10.00 },
+          { "name": "Salada YAML", "price": 9.50 },
+          { "name": "Salada Swagger", "price": 10.50 },
+          { "name": "Salada REST", "price": 9.80 }
+        ]
+      },
+      {
+        "name": "Extras Dev",
+        "icon": "https://img.icons8.com/color/48/sauce.png",
+        "products": [
+          { "name": "Molho ORM", "price": 2.50 },
+          { "name": "Cheddar CLI", "price": 2.00 },
+          { "name": "Bacon NGINX", "price": 3.00 },
+          { "name": "Ketchup DNS", "price": 1.50 }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Café da Manhã",
+    "icon": "https://img.icons8.com/color/48/breakfast.png",
+    "subcategories": [
+      {
+        "name": "Pães e Torradas",
+        "icon": "https://img.icons8.com/color/48/bread.png",
+        "products": [
+          { "name": "Pão na Chapa", "price": 5.00 },
+          { "name": "Pão Francês", "price": 5.50 },
+          { "name": "Croissant", "price": 6.00 },
+          { "name": "Torrada com Manteiga", "price": 5.20 }
+        ]
+      },
+      {
+        "name": "Bebidas Quentes",
+        "icon": "https://img.icons8.com/color/48/hot-chocolate.png",
+        "products": [
+          { "name": "Café Preto", "price": 6.00 },
+          { "name": "Chá Natural", "price": 5.50 },
+          { "name": "Capuccino", "price": 7.00 },
+          { "name": "Chocolate Quente", "price": 7.50 }
+        ]
+      },
+      {
+        "name": "Frutas",
+        "icon": "https://img.icons8.com/color/48/fruit-bag.png",
+        "products": [
+          { "name": "Banana", "price": 3.00 },
+          { "name": "Maçã", "price": 3.20 },
+          { "name": "Uva", "price": 3.50 },
+          { "name": "Manga", "price": 3.80 }
+        ]
+      },
+      {
+        "name": "Iogurtes",
+        "icon": "https://img.icons8.com/color/48/yogurt.png",
+        "products": [
+          { "name": "Iogurte Natural", "price": 6.00 },
+          { "name": "Iogurte com Granola", "price": 6.50 },
+          { "name": "Iogurte com Mel", "price": 6.80 },
+          { "name": "Iogurte com Frutas", "price": 7.00 }
+        ]
+      },
+      {
+        "name": "Cereais",
+        "icon": "https://img.icons8.com/color/48/cornflakes.png",
+        "products": [
+          { "name": "Cereal com Leite", "price": 5.50 },
+          { "name": "Cereal de Milho", "price": 5.80 },
+          { "name": "Cereal de Aveia", "price": 6.00 },
+          { "name": "Cereal Integral", "price": 6.20 }
         ]
       }
     ]

@@ -24,7 +24,7 @@
             {
                 string activeClass = category.active ? "active" : "";
                 <a href="/Menu/@category.id" class="category-btn @activeClass">
-                    <span class="icon">🍕</span>
+                    <span class="icon"><img src="@category.icon" /></span>
                     <span class="label">@category.name</span>
                 </a>
             }

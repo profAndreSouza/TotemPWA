@@ -21,7 +21,6 @@ namespace TotemPWA.Controllers
         public async Task<ActionResult<IEnumerable<Product>>> GetAll()
         {
             return await _context.Products
-                .Include(p => p.Variations)
                 .Include(p => p.Category)
                 .ToListAsync();
         }
@@ -31,7 +30,6 @@ namespace TotemPWA.Controllers
         public async Task<ActionResult<Product>> Get(int id)
         {
             var product = await _context.Products
-                .Include(p => p.Variations)
                 .Include(p => p.Category)
                 .FirstOrDefaultAsync(p => p.Id == id);
 
@@ -64,29 +62,14 @@ namespace TotemPWA.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _context.Products
-                .Include(p => p.Variations)
                 .FirstOrDefaultAsync(p => p.Id == id);
 
             if (product == null) return NotFound();
 
-            _context.Variations.RemoveRange(product.Variations);
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
             return NoContent();
         }
 
-        // POST: api/Product/{productId}/Variation
-        [HttpPost("{productId}/Variation")]
-        public async Task<ActionResult<Variation>> AddVariation(int productId, Variation variation)
-        {
-            var product = await _context.Products.FindAsync(productId);
-            if (product == null) return NotFound();
-
-            variation.ProductId = productId;
-            _context.Variations.Add(variation);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(Get), new { id = productId }, variation);
-        }
     }
 }

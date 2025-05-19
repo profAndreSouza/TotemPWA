@@ -33,8 +33,11 @@ namespace TotemPWA.Data
             var category = new Category
             {
                 Name = seed.Name,
+                Icon = seed.Icon,
                 ParentCategoryId = parentId
             };
+
+            Console.Write(category);
 
             context.Categories.Add(category);
             await context.SaveChangesAsync(); // necessário para obter o Id da categoria
@@ -46,23 +49,12 @@ namespace TotemPWA.Data
                 {
                     Name = productSeed.Name,
                     Price = productSeed.Price,
+                    Image = productSeed.Image,
                     CategoryId = category.Id
                 };
 
                 context.Products.Add(product);
-                await context.SaveChangesAsync(); // necessário para obter o Id do produto
-
-                foreach (var variationSeed in productSeed.Variations ?? new List<VariationSeed>())
-                {
-                    var variation = new Variation
-                    {
-                        Description = variationSeed.Description,
-                        AdditionalPrice = variationSeed.AdditionalPrice,
-                        ProductId = product.Id
-                    };
-
-                    context.Variations.Add(variation);
-                }
+                await context.SaveChangesAsync(); 
             }
 
             // Recursivamente cria subcategorias

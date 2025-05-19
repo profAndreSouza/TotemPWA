@@ -29,6 +29,10 @@ namespace TotemPWA.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -54,6 +58,9 @@ namespace TotemPWA.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -66,31 +73,6 @@ namespace TotemPWA.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("TotemPWA.Models.Variation", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<decimal>("AdditionalPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("Variations");
                 });
 
             modelBuilder.Entity("TotemPWA.Models.Category", b =>
@@ -114,27 +96,11 @@ namespace TotemPWA.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("TotemPWA.Models.Variation", b =>
-                {
-                    b.HasOne("TotemPWA.Models.Product", "Product")
-                        .WithMany("Variations")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("TotemPWA.Models.Category", b =>
                 {
                     b.Navigation("Products");
 
                     b.Navigation("Subcategories");
-                });
-
-            modelBuilder.Entity("TotemPWA.Models.Product", b =>
-                {
-                    b.Navigation("Variations");
                 });
 #pragma warning restore 612, 618
         }

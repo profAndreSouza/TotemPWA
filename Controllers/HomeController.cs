@@ -27,16 +27,6 @@ public class HomeController : Controller
     // [HttpGet]
     public async Task<IActionResult> Menu(int? categoryId, int? subcategoryId)
     {
-        // var rootCategories = await _context.Categories
-        // .Where(c => c.ParentCategoryId == null)
-        // .Select(c => new
-        // {
-        //     id = c.Id,
-        //     name = c.Name,
-        //     active = categoryId != null && c.Id == categoryId
-        // })
-        // .ToListAsync();
-
         var rootCategoriesRaw = await _context.Categories
             .Where(c => c.ParentCategoryId == null)
             .ToListAsync();
@@ -48,6 +38,7 @@ public class HomeController : Controller
             {
                 id = c.Id,
                 name = c.Name,
+                icon = c.Icon,
                 active = c.Id == activeCategoryId
             })
             .ToList();
@@ -65,6 +56,7 @@ public class HomeController : Controller
             {
                 id = c.Id,
                 name = c.Name,
+                icon = c.Icon,
                 active = c.Id == activeSubcategoryId
             })
             .ToList();
@@ -85,6 +77,11 @@ public class HomeController : Controller
         ViewBag.Products = products;
 
         return View();
+        // return Ok(new {
+        //     rootCategories,
+        //     subcategories,
+        //     products
+        // });
     }
     
 

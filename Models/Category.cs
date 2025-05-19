@@ -6,6 +6,7 @@ namespace TotemPWA.Models
     {
         public int Id { get; set; }
         public required string Name { get; set; }
+        public required string Icon { get; set; }
         public int? ParentCategoryId { get; set; }
         [JsonIgnore]
         public Category? ParentCategory { get; set; }
