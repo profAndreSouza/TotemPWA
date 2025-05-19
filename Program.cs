@@ -5,15 +5,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-        // .AddJsonOptions(options =>
-        //     {
-        //         options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
-        //         options.JsonSerializerOptions.MaxDepth = 4;
-        //     });
 
 // Add SQL Server Connection 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    // options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"))
+    options.UseSqlite(builder.Configuration.GetConnectionString("SQLLiteConnection"))
+);
 
 // Add Swagger services
 builder.Services.AddEndpointsApiExplorer();
@@ -33,7 +30,7 @@ using (var scope = app.Services.CreateScope())
     // context.Database.Migrate();       
 
     // Executa o Seed (inicialização de dados)
-    // await DbInitializer.InitializeAsync(context);
+    await DbInitializer.InitializeAsync(context);
 }
 
 // Configure the HTTP request pipeline.

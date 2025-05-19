@@ -38,6 +38,7 @@ public class HomeController : Controller
             {
                 id = c.Id,
                 name = c.Name,
+                slug = c.Slug,
                 icon = c.Icon,
                 active = c.Id == activeCategoryId
             })
@@ -56,6 +57,7 @@ public class HomeController : Controller
             {
                 id = c.Id,
                 name = c.Name,
+                slug = c.Slug,
                 icon = c.Icon,
                 active = c.Id == activeSubcategoryId
             })
@@ -76,12 +78,12 @@ public class HomeController : Controller
         ViewBag.SubCategories = subcategories;
         ViewBag.Products = products;
 
-        return View();
-        // return Ok(new {
-        //     rootCategories,
-        //     subcategories,
+        // return View();
+        return Ok(new {
+            rootCategories,
+            subcategories,
         //     products
-        // });
+        });
     }
     
 
