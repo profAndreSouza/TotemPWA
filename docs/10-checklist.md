@@ -46,7 +46,7 @@
 - [ ] Carrinho (`CartController` + `CustomizationController`)  
 - [ ] Finalização (`OrderController` + `PaymentController`)  
 
-### Telas Administrativas**
+### **Telas Administrativas**
 - [ ] Dashboard (resumo de pedidos)  
 - [ ] CRUDs (`CategoryController`, `ProductController`, etc.)  
 
