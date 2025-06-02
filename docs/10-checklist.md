@@ -1,7 +1,7 @@
 # Checklist Totem ADS Burguer
 
 ## Datas Importantes
-- Prévia 26/junho
+- Prévia 23/junho
 - Apresentação 30/junho
   - Duração: 25 min
   - Apresentação em Slides
