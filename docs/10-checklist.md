@@ -1,5 +1,13 @@
 # Checklist Totem ADS Burguer
 
+## Datas Importantes
+- Prévia 26/junho
+- Apresentação 30/junho
+  - Duração: 25 min
+  - Apresentação em Slides
+  - Documentação (Engenharia de Software)
+  - Demonstração (localhost)
+
 ## **Backend**
 ### **Models e Migrations** (100%)  
 - [ ] `Category` (com auto-relacionamento)  
