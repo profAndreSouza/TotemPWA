@@ -14,7 +14,7 @@
 - [ ] `Order`  
 - [ ] `Payment`  
 - [ ] `OrderItem`  
-- [ ] `Customize`  
+- [ ] `Customize` (relação N:N entre `OrderItem` e `Ingredient`)  
 
 ### **Controllers Necessários**
 #### **Área do Cliente (Totem)**
