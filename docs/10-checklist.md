@@ -28,7 +28,7 @@
 #### **Área do Cliente (Totem)**
 | Controller            | Métodos Principais                          | Descrição                               |
 |-----------------------|---------------------------------------------|-----------------------------------------|
-| [ ] `ClientController`    | `Register(clientData)`                      | Cadastro inicial do cliente (CPF/nome)  |
+| - [ ] `ClientController`    | `Register(clientData)`                      | Cadastro inicial do cliente (CPF/nome)  |
 | [ ] `MenuController`      | `GetCategories()`, `GetProducts(categoryId)`| Listar categorias e produtos            |
 | [ ] `CartController`      | `AddItem(productId)`, `UpdateItem(itemId)`, `RemoveItem(itemId)` | Gerenciar carrinho       |
 | [ ] `CustomizationController` | `GetIngredients(productId)`, `ApplyCustomization(orderItemId, ingredientChanges)` | Personalizar itens |
