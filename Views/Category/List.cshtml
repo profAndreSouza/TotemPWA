@@ -1,0 +1,37 @@
+@model List<TotemPWA.Models.Category>
+
+@{
+    Layout = "_Admin";
+    ViewData["Title"] = "Categorias";
+}
+
+<h1>Categorias</h1>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Nova Categoria</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Slug</th>
+            <th>Ícone</th>
+            <th>Categoria Pai</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Slug</td>
+                <td>@item.Icon</td>
+                <td>@item.ParentCategory?.Name</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

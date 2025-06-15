@@ -1,0 +1,16 @@
+@model TotemPWA.Models.Category
+
+@{
+    Layout = "_Admin";
+    ViewData["Title"] = "Excluir Categoria";
+}
+
+<h1>Excluir Categoria</h1>
+
+<p>Tem certeza que deseja excluir a categoria <strong>@Model.Name</strong>?</p>
+
+<form asp-action="ConfirmDelete" asp-route-id="@Model.Id" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a asp-action="List" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Totem Admin</title>
+    <link rel="stylesheet" href="~/css/admin.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Totem Admin</h1>
+            <ul>
+                <li><a asp-controller="Category" asp-action="List">Categorias</a></li>
+                <li><a asp-controller="Product" asp-action="List">Produtos</a></li>
+                <li><a asp-controller="Promotion" asp-action="List">Promoções</a></li>
+                <li><a asp-controller="Ingredient" asp-action="List">Ingredientes</a></li>
+                <li><a asp-controller="Cupom" asp-action="List">Cupons</a></li>
+                <li><a asp-controller="Employee" asp-action="List">Funcionários</a></li>
+                <li><a asp-controller="OrderAdmin" asp-action="List">Pedidos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        @RenderBody()
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Totem PWA - Admin</p>
+    </footer>
+</body>
+</html>

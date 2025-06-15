@@ -1,0 +1,32 @@
+@model TotemPWA.ViewModels.ProductViewModel
+
+@{
+    Layout = "_Admin";
+    ViewData["Title"] = "Novo Produto";
+}
+
+<h1>Novo Produto</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Product.Name"></label>
+        <input asp-for="Product.Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Price"></label>
+        <input asp-for="Product.Price" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.Image"></label>
+        <input asp-for="Product.Image" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Product.CategoryId">Categoria</label>
+        <select asp-for="Product.CategoryId" asp-items="Model.Categories" class="form-control">
+            <option value="">(Selecione)</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>
+
+<a asp-action="List">Voltar</a>
