@@ -1,13 +1,13 @@
 # Conceitos de Programação Orientada a Objetos
 
-Nos arquivos `Program.cs` e `ApplicationDbContext.cs`, podemos identificar vários conceitos de **Programação Orientada a Objetos (POO)** sendo aplicados. Abaixo estão os principais conceitos de POO encontrados:
+Nos arquivos `Program.cs` e `AppDbContext.cs`, podemos identificar vários conceitos de **Programação Orientada a Objetos (POO)** sendo aplicados. Abaixo estão os principais conceitos de POO encontrados:
 
 ## 1. **Encapsulamento**
 
 * **Definição**: O encapsulamento é o princípio da POO que envolve a ocultação dos detalhes internos de implementação de uma classe e a exposição apenas de uma interface pública, permitindo que o código externo interaja com o objeto de maneira controlada.
 * **Exemplo no código**:
 
-  * O `DbContext` (classe base para `ApplicationDbContext`) encapsula a lógica de acesso e manipulação do banco de dados. O código externo interage com o `DbContext` e suas propriedades (`DbSet<Category> Categories`, `DbSet<Product> Products`, etc.) sem precisar saber como os dados são armazenados ou acessados internamente.
+  * O `DbContext` (classe base para `AppDbContext`) encapsula a lógica de acesso e manipulação do banco de dados. O código externo interage com o `DbContext` e suas propriedades (`DbSet<Category> Categories`, `DbSet<Product> Products`, etc.) sem precisar saber como os dados são armazenados ou acessados internamente.
   * **Exemplo**:
 
     ```csharp
@@ -15,7 +15,7 @@ Nos arquivos `Program.cs` e `ApplicationDbContext.cs`, podemos identificar vári
     public DbSet<Product> Products { get; set; }
     ```
 
-    Essas propriedades são a interface pública do `ApplicationDbContext`, mas os detalhes de como as entidades são persistidas são ocultados dentro da classe `DbContext`.
+    Essas propriedades são a interface pública do `AppDbContext`, mas os detalhes de como as entidades são persistidas são ocultados dentro da classe `DbContext`.
 
 ---
 
@@ -24,14 +24,14 @@ Nos arquivos `Program.cs` e `ApplicationDbContext.cs`, podemos identificar vári
 * **Definição**: A herança é um mecanismo que permite que uma classe derive de outra, herdando seus atributos e comportamentos (métodos), promovendo a reutilização de código.
 * **Exemplo no código**:
 
-  * A classe `ApplicationDbContext` herda de `DbContext`, permitindo que ela utilize toda a funcionalidade do Entity Framework Core para interação com o banco de dados, sem precisar reimplementar esse comportamento.
+  * A classe `AppDbContext` herda de `DbContext`, permitindo que ela utilize toda a funcionalidade do Entity Framework Core para interação com o banco de dados, sem precisar reimplementar esse comportamento.
   * **Exemplo**:
 
     ```csharp
-    public class ApplicationDbContext : DbContext
+    public class AppDbContext : DbContext
     ```
 
-    A classe `ApplicationDbContext` herda todas as funcionalidades do `DbContext` e, além disso, define as suas próprias propriedades (como `DbSet<Category>`) e personaliza o comportamento da interação com o banco de dados.
+    A classe `AppDbContext` herda todas as funcionalidades do `DbContext` e, além disso, define as suas próprias propriedades (como `DbSet<Category>`) e personaliza o comportamento da interação com o banco de dados.
 
 ---
 
@@ -40,7 +40,7 @@ Nos arquivos `Program.cs` e `ApplicationDbContext.cs`, podemos identificar vári
 * **Definição**: Polimorfismo é o princípio da POO que permite que objetos de diferentes classes sejam tratados de maneira uniforme, por meio de uma interface comum ou método sobrecarregado.
 * **Exemplo no código**:
 
-  * No código, temos o método `OnModelCreating(ModelBuilder modelBuilder)` da classe `DbContext`, que é sobrescrito na classe `ApplicationDbContext`. Esse é um exemplo clássico de polimorfismo, onde a classe derivada fornece uma implementação específica para um método da classe base.
+  * No código, temos o método `OnModelCreating(ModelBuilder modelBuilder)` da classe `DbContext`, que é sobrescrito na classe `AppDbContext`. Esse é um exemplo clássico de polimorfismo, onde a classe derivada fornece uma implementação específica para um método da classe base.
   * **Exemplo**:
 
     ```csharp
@@ -51,7 +51,7 @@ Nos arquivos `Program.cs` e `ApplicationDbContext.cs`, podemos identificar vári
     }
     ```
 
-    O método `OnModelCreating` é definido na classe base `DbContext` e é sobrescrito na classe derivada `ApplicationDbContext` para personalizar o comportamento do modelo de dados.
+    O método `OnModelCreating` é definido na classe base `DbContext` e é sobrescrito na classe derivada `AppDbContext` para personalizar o comportamento do modelo de dados.
 
 ---
 
@@ -96,15 +96,15 @@ Nos arquivos `Program.cs` e `ApplicationDbContext.cs`, podemos identificar vári
 * **Definição**: A injeção de dependência é um padrão de design que permite que uma classe receba suas dependências de forma externa, ao invés de criá-las internamente. Isso promove um código mais modular, testável e desacoplado.
 * **Exemplo no código**:
 
-  * O uso de `AddDbContext<ApplicationDbContext>` no `Program.cs` é um exemplo de injeção de dependência. O `ApplicationDbContext` é injetado automaticamente quando necessário na aplicação.
+  * O uso de `AddDbContext<AppDbContext>` no `Program.cs` é um exemplo de injeção de dependência. O `AppDbContext` é injetado automaticamente quando necessário na aplicação.
   * **Exemplo**:
 
     ```csharp
-    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
     ```
 
-    Isso garante que o `ApplicationDbContext` seja instanciado de forma controlada e possa ser utilizado em qualquer parte da aplicação onde for necessário, sem acoplamento direto entre as classes.
+    Isso garante que o `AppDbContext` seja instanciado de forma controlada e possa ser utilizado em qualquer parte da aplicação onde for necessário, sem acoplamento direto entre as classes.
 
 ---
 
@@ -127,7 +127,7 @@ using Microsoft.EntityFrameworkCore;
 // Importa a biblioteca necessária para utilizar o Entity Framework Core (EF Core) e sua funcionalidade de manipulação de banco de dados.
 
 using TotemPWA.Data;
-// Importa o namespace do projeto onde se encontra o contexto do banco de dados (ApplicationDbContext).
+// Importa o namespace do projeto onde se encontra o contexto do banco de dados (AppDbContext).
 
 var builder = WebApplication.CreateBuilder(args);
 // Cria um objeto builder para configurar os serviços e o pipeline da aplicação.
@@ -142,7 +142,7 @@ builder.Services.AddControllersWithViews();
     //     });
 // Comentado, mas caso ativado, configuraria o serializador JSON para gerenciar referências e profundidade de objetos.
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Adiciona o contexto do banco de dados ao contêiner de injeção de dependências, configurando o uso do SQL Server com a string de conexão do arquivo de configuração.
 
@@ -158,7 +158,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope()) 
 {
     var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<ApplicationDbContext>();
+    var context = services.GetRequiredService<AppDbContext>();
     // Cria um escopo para injeção de dependências e recupera o contexto do banco de dados.
 
     // Apaga o banco de dados completamente
@@ -213,7 +213,7 @@ app.Run();
 
 # Teoria: Conceitos no `Program.cs`
 
-1. **Injeção de Dependência (DI)**: O método `builder.Services.AddDbContext<ApplicationDbContext>()` é um exemplo de como a injeção de dependência funciona no ASP.NET Core. Ele permite que o contexto do banco de dados (`ApplicationDbContext`) seja injetado automaticamente nos controladores ou outros serviços quando necessário.
+1. **Injeção de Dependência (DI)**: O método `builder.Services.AddDbContext<AppDbContext>()` é um exemplo de como a injeção de dependência funciona no ASP.NET Core. Ele permite que o contexto do banco de dados (`AppDbContext`) seja injetado automaticamente nos controladores ou outros serviços quando necessário.
 
 2. **Migrations**: `context.Database.Migrate()` aplica as migrações que são mudanças estruturais no banco de dados, garantindo que o banco de dados esteja atualizado com a estrutura definida no código.
 
@@ -225,7 +225,7 @@ app.Run();
 
 ---
 
-## `ApplicationDbContext.cs`
+## `AppDbContext.cs`
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -234,9 +234,9 @@ using TotemPWA.Models;
 
 namespace TotemPWA.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
         // Construtor que recebe opções de configuração e passa para a classe base DbContext.
@@ -285,9 +285,9 @@ namespace TotemPWA.Data
 }
 ```
 
-# Teoria: Conceitos no `ApplicationDbContext.cs`
+# Teoria: Conceitos no `AppDbContext.cs`
 
-1. **DbContext**: O `DbContext` é a classe fundamental para interagir com o banco de dados usando o Entity Framework Core. Ele define as tabelas e mapeia as entidades para essas tabelas. `ApplicationDbContext` herda de `DbContext` e fornece o mapeamento de entidades como `Category`, `Product`, e `Variation`.
+1. **DbContext**: O `DbContext` é a classe fundamental para interagir com o banco de dados usando o Entity Framework Core. Ele define as tabelas e mapeia as entidades para essas tabelas. `AppDbContext` herda de `DbContext` e fornece o mapeamento de entidades como `Category`, `Product`, e `Variation`.
 
 2. **DbSet**: As propriedades do tipo `DbSet` representam as coleções de entidades que serão mapeadas para tabelas no banco de dados. Por exemplo, `public DbSet<Category> Categories` mapeia a tabela de categorias.
 

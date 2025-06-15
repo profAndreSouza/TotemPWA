@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // Add SQL Server Connection 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
+builder.Services.AddDbContext<AppDbContext>(options =>
     // options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"))
     options.UseSqlite(builder.Configuration.GetConnectionString("SQLLiteConnection"))
 );
@@ -21,7 +21,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
-    var context = services.GetRequiredService<ApplicationDbContext>();
+    var context = services.GetRequiredService<AppDbContext>();
 
     // Apaga o banco de dados completamente
     // context.Database.EnsureDeleted(); 
@@ -30,7 +30,7 @@ using (var scope = app.Services.CreateScope())
     // context.Database.Migrate();       
 
     // Executa o Seed (inicialização de dados)
-    await DbInitializer.InitializeAsync(context);
+    // await DbInitializer.InitializeAsync(context);
 }
 
 // Configure the HTTP request pipeline.

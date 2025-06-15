@@ -81,9 +81,9 @@ O framework gerencia isso automaticamente via container de serviços.
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private readonly ApplicationDbContext _context;
+    private readonly AppDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _logger = logger;
         _context = context;
@@ -169,7 +169,7 @@ return NotFound();
 ## Aspectos de Orientação a Objetos no Controller
 
 * A classe `HomeController` herda da classe base `Controller` → exemplo de **herança**.
-* Usa **injeção de dependência** para receber o `ApplicationDbContext` e o `ILogger` → promove **baixo acoplamento** e **encapsulamento**.
+* Usa **injeção de dependência** para receber o `AppDbContext` e o `ILogger` → promove **baixo acoplamento** e **encapsulamento**.
 * Os métodos públicos (`Index`, `Menu`, `Error`) são ações chamadas pelas rotas → comportamento da classe.
 
 ---
@@ -198,10 +198,10 @@ public class HomeController : Controller
     private readonly ILogger<HomeController> _logger;
 
     // Campo para acesso ao banco de dados via Entity Framework
-    private readonly ApplicationDbContext _context;
+    private readonly AppDbContext _context;
 
     // Construtor com injeção de dependências para o logger e o contexto do banco
-    public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _context = context;
         _logger = logger;
@@ -313,10 +313,10 @@ namespace TotemPWA.Controllers // Define o namespace da aplicação.
     [Route("api/[controller]")] // Define a rota base como "api/Category".
     public class CategoryController : ControllerBase // Herda de ControllerBase (polimorfismo).
     {
-        private readonly ApplicationDbContext _context; // Campo privado para acessar o banco de dados (encapsulamento).
+        private readonly AppDbContext _context; // Campo privado para acessar o banco de dados (encapsulamento).
 
 
-        public CategoryController(ApplicationDbContext context) // Construtor com injeção de dependência.
+        public CategoryController(AppDbContext context) // Construtor com injeção de dependência.
         {
             _context = context;
         }
@@ -399,10 +399,10 @@ namespace TotemPWA.Controllers
     [Route("api/[controller]")] // Rota base: api/Product
     public class ProductController : ControllerBase
     {
-        private readonly ApplicationDbContext _context; // Campo injetado via construtor.
+        private readonly AppDbContext _context; // Campo injetado via construtor.
 
 
-        public ProductController(ApplicationDbContext context) // Injeção de dependência (encapsulamento + inversão de controle).
+        public ProductController(AppDbContext context) // Injeção de dependência (encapsulamento + inversão de controle).
         {
             _context = context;
         }

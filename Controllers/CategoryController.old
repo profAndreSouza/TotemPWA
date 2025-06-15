@@ -9,9 +9,9 @@ namespace TotemPWA.Controllers
     [Route("api/[controller]")]
     public class CategoryController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly AppDbContext _context;
 
-        public CategoryController(ApplicationDbContext context)
+        public CategoryController(AppDbContext context)
         {
             _context = context;
         }

@@ -108,7 +108,7 @@ namespace TotemPWA.Data
     public static class DbInitializer
     {
         // Método público e assíncrono que inicializa o banco com dados
-        public static async Task InitializeAsync(ApplicationDbContext context)
+        public static async Task InitializeAsync(AppDbContext context)
         {
             // Verifica se já existem categorias no banco. Se sim, sai do método (evita duplicação).
             if (context.Categories.Any())
@@ -138,7 +138,7 @@ namespace TotemPWA.Data
         }
 
         // Método recursivo que insere uma categoria e seus produtos, variações e subcategorias
-        private static async Task CreateCategoryRecursiveAsync(ApplicationDbContext context, CategorySeed seed, int? parentId)
+        private static async Task CreateCategoryRecursiveAsync(AppDbContext context, CategorySeed seed, int? parentId)
         {
             // Cria uma nova categoria com base no dado do seed
             var category = new Category

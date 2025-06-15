@@ -5,7 +5,7 @@ namespace TotemPWA.Data
 {
     public static class DbInitializer
     {
-        public static async Task InitializeAsync(ApplicationDbContext context)
+        public static async Task InitializeAsync(AppDbContext context)
         {
             if (context.Categories.Any())
                 return;
@@ -28,7 +28,7 @@ namespace TotemPWA.Data
             }
         }
 
-        private static async Task CreateCategoryRecursiveAsync(ApplicationDbContext context, CategorySeed seed, int? parentId)
+        private static async Task CreateCategoryRecursiveAsync(AppDbContext context, CategorySeed seed, int? parentId)
         {
             var category = new Category
             {

@@ -7,8 +7,7 @@ namespace TotemPWA.Models
     {
         public int Id { get; set; }
 
-        private string _name;
-        private string _slug;
+        private string _name = string.Empty;
 
         public required string Name
         {
@@ -16,22 +15,14 @@ namespace TotemPWA.Models
             set
             {
                 _name = value;
-                _slug = GenerateSlug(value);
+                Slug = GenerateSlug(value);
             }
         }
 
-        public string Slug => _slug;
-
-        private string GenerateSlug(string text)
-        {
-            text = text.ToLowerInvariant().Trim();
-            text = Regex.Replace(text, @"[^a-z0-9\s-]", "");
-            text = Regex.Replace(text, @"\s+", "-");
-            text = Regex.Replace(text, @"-+", "-");
-            return text;
-        }
+        public string Slug { get; private set; } = string.Empty;
 
         public required string Icon { get; set; }
+
         public int? ParentCategoryId { get; set; }
 
         [JsonIgnore]
@@ -39,5 +30,14 @@ namespace TotemPWA.Models
 
         public ICollection<Category> Subcategories { get; set; } = new List<Category>();
         public ICollection<Product> Products { get; set; } = new List<Product>();
+
+        private static string GenerateSlug(string text)
+        {
+            text = text.ToLowerInvariant().Trim();
+            text = Regex.Replace(text, @"[^a-z0-9\s-]", "");
+            text = Regex.Replace(text, @"\s+", "-");
+            text = Regex.Replace(text, @"-+", "-");
+            return text;
+        }
     }
 }
