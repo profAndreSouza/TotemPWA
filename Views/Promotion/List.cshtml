@@ -1,0 +1,35 @@
+@model IEnumerable<TotemPWA.Models.Promotion>
+
+@{
+    Layout = "_Admin";
+    ViewData["Title"] = "Promoções";
+}
+
+<h1>Promoções</h1>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Nova Promoção</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th>Desconto (%)</th>
+            <th>Válida até</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var promo in Model)
+        {
+            <tr>
+                <td>@promo.Product?.Name</td>
+                <td>@promo.Percent</td>
+                <td>@promo.ValidUntil.ToString("dd/MM/yyyy")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@promo.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@promo.Id" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+@model TotemPWA.ViewModels.PromotionViewModel
+
+@{
+    Layout = "_Admin";
+    ViewData["Title"] = "Editar Promoção";
+}
+
+<h1>Editar Promoção</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="ProductId"></label>
+        <select asp-for="ProductId" asp-items="Model.Products" class="form-control"></select>
+        <span asp-validation-for="ProductId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Percent"></label>
+        <input asp-for="Percent" class="form-control" />
+        <span asp-validation-for="Percent" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ValidUntil"></label>
+        <input asp-for="ValidUntil" type="date" class="form-control" />
+        <span asp-validation-for="ValidUntil" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+    <a asp-action="List" class="btn btn-secondary">Voltar</a>
+</form>
