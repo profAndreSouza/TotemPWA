@@ -1,0 +1,35 @@
+@model IEnumerable<TotemPWA.Models.Cupom>
+
+@{
+    Layout = "_Admin";
+    ViewData["Title"] = "Cupons";
+}
+
+<h1>Cupons</h1>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Novo Cupom</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Tipo</th>
+            <th>Valor</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cupom in Model)
+        {
+            <tr>
+                <td>@cupom.Code</td>
+                <td>@cupom.Type</td>
+                <td>@cupom.Value.ToString("C")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@cupom.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@cupom.Id" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

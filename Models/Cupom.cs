@@ -8,6 +8,6 @@ namespace TotemPWA.Models
         public string Type { get; set; } // percentual ou valor fixo
         public decimal Value { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public ICollection<Order>? Orders { get; set; }
     }
 }

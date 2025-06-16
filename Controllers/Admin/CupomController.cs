@@ -5,20 +5,19 @@ using TotemPWA.Models;
 
 namespace TotemPWA.Controllers.Admin
 {
-    public class IngredientController : Controller
+    public class CupomController : Controller
     {
         private readonly AppDbContext _context;
 
-        public IngredientController(AppDbContext context)
+        public CupomController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: admin/Ingredient/List
         public async Task<IActionResult> List()
         {
-            var ingredients = await _context.Ingredients.ToListAsync();
-            return View(ingredients);
+            var cupons = await _context.Cupons.ToListAsync();
+            return View(cupons);
         }
 
         public IActionResult Create()
@@ -28,38 +27,38 @@ namespace TotemPWA.Controllers.Admin
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Ingredient ingredient)
+        public async Task<IActionResult> Create(Cupom cupom)
         {
-            if (!ModelState.IsValid) return View(ingredient);
+            if (!ModelState.IsValid) return View(cupom);
 
-            _context.Ingredients.Add(ingredient);
+            _context.Cupons.Add(cupom);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(List));
         }
 
         public async Task<IActionResult> Edit(int id)
         {
-            var ingredient = await _context.Ingredients.FindAsync(id);
-            if (ingredient == null) return NotFound();
+            var cupom = await _context.Cupons.FindAsync(id);
+            if (cupom == null) return NotFound();
 
-            return View(ingredient);
+            return View(cupom);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Ingredient ingredient)
+        public async Task<IActionResult> Edit(int id, Cupom cupom)
         {
-            if (id != ingredient.Id) return BadRequest();
-            if (!ModelState.IsValid) return View(ingredient);
+            if (id != cupom.Id) return BadRequest();
+            if (!ModelState.IsValid) return View(cupom);
 
             try
             {
-                _context.Update(ingredient);
+                _context.Update(cupom);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!_context.Ingredients.Any(i => i.Id == id))
+                if (!_context.Cupons.Any(c => c.Id == id))
                     return NotFound();
                 throw;
             }
@@ -69,20 +68,20 @@ namespace TotemPWA.Controllers.Admin
 
         public async Task<IActionResult> Delete(int id)
         {
-            var ingredient = await _context.Ingredients.FirstOrDefaultAsync(i => i.Id == id);
-            if (ingredient == null) return NotFound();
+            var cupom = await _context.Cupons.FindAsync(id);
+            if (cupom == null) return NotFound();
 
-            return View(ingredient);
+            return View(cupom);
         }
 
         [HttpPost, ActionName("DeleteConfirmed")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var ingredient = await _context.Ingredients.FindAsync(id);
-            if (ingredient == null) return NotFound();
+            var cupom = await _context.Cupons.FindAsync(id);
+            if (cupom == null) return NotFound();
 
-            _context.Ingredients.Remove(ingredient);
+            _context.Cupons.Remove(cupom);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(List));
         }

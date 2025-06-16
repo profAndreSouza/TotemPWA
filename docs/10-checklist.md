@@ -36,15 +36,15 @@
 | [ ] `PaymentController`   | `ProcessPayment(orderId, method)`           | Pagamento simulado                      |
 
 #### **Área Administrativa (CRUD)**
-| Controller            | Métodos CRUD                                | Descrição                               |
-|-----------------------|---------------------------------------------|-----------------------------------------|
-| [x] `CategoryController`  | `Create()`, `Edit()`, `Delete()`, `List()`  | Gerenciar categorias/subcategorias      |
-| [x] `ProductController`   | `Create()`, `Edit()`, `Delete()`, `List()`  | Produtos e combos                       |
-| [x] `PromotionController` | `Create()`, `Edit()`, `Delete()`, `List()`  | Promoções vinculadas a produtos         |
-| [ ] `IngredientController`| `Create()`, `Edit()`, `Delete()`, `List()`  | Ingredientes e associações              |
-| [ ] `CupomController`     | `Generate()`, `Disable()`, `List()`         | Cupons de desconto                      |
+| Controller                | Métodos CRUD                                 | Descrição                               |
+|---------------------------|----------------------------------------------|-----------------------------------------|
+| [x] `CategoryController`  | `Create()`, `Edit()`, `Delete()`, `List()`   | Gerenciar categorias/subcategorias      |
+| [x] `ProductController`   | `Create()`, `Edit()`, `Delete()`, `List()`   | Produtos e combos                       |
+| [x] `PromotionController` | `Create()`, `Edit()`, `Delete()`, `List()`   | Promoções vinculadas a produtos         |
+| [x] `IngredientController`| `Create()`, `Edit()`, `Delete()`, `List()`   | Ingredientes e associações              |
+| [x] `CupomController`     | `Create()`, `Edit()`, `Delete()`, `List()`   | Cupons de desconto                      |
 | [ ] `EmployeeController`  | `Register()`, `Edit()`, `Disable()`, `List()`| Funcionários (herdam de `Client`)       |
-| [ ] `OrderAdminController`| `List()`, `UpdateStatus(orderId, status)`   | Visualizar/alterar pedidos              |
+| [ ] `OrderAdminController`| `List()`, `UpdateStatus(orderId, status)`    | Visualizar/alterar pedidos              |
 
 
 ## **Frontend**
