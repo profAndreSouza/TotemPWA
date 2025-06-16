@@ -26,14 +26,14 @@
 
 ### **Controllers Necessários**
 #### **Área do Cliente (Totem)**
-| Controller            | Métodos Principais                          | Descrição                               |
-|-----------------------|---------------------------------------------|-----------------------------------------|
-| [ ] `ClientController`    | `Register(clientData)`                      | Cadastro inicial do cliente (CPF/nome)  |
-| [ ] `MenuController`      | `GetCategories()`, `GetProducts(categoryId)`| Listar categorias e produtos            |
-| [ ] `CartController`      | `AddItem(productId)`, `UpdateItem(itemId)`, `RemoveItem(itemId)` | Gerenciar carrinho       |
-| [ ] `CustomizationController` | `GetIngredients(productId)`, `ApplyCustomization(orderItemId, ingredientChanges)` | Personalizar itens |
-| [ ] `OrderController`     | `ApplyCupom(code)`, `SetDeliveryType(type)`, `FinalizeOrder()` | Finalizar pedido   |
-| [ ] `PaymentController`   | `ProcessPayment(orderId, method)`           | Pagamento simulado                      |
+| Controller                    | Métodos Principais                                                                | Descrição                               |
+|-------------------------------|-----------------------------------------------------------------------------------|-----------------------------------------|
+| [ ] `ClientController`        | `Register(clientData)`                                                            | Cadastro inicial do cliente (CPF/nome)  |
+| [x] `MenuController`          | `Home()`, `Menu(categorySlug?, subCategorySlug?)`                                 | Listar categorias e produtos            |
+| [ ] `CartController`          | `AddItem(productId)`, `UpdateItem(itemId)`, `RemoveItem(itemId)`                  | Gerenciar carrinho                      |
+| [ ] `CustomizationController` | `GetIngredients(productId)`, `ApplyCustomization(orderItemId, ingredientChanges)` | Personalizar itens                      |
+| [ ] `OrderController`         | `ApplyCupom(code)`, `SetDeliveryType(type)`, `FinalizeOrder()`                    | Finalizar pedido                        |
+| [ ] `PaymentController`       | `ProcessPayment(orderId, method)`                                                 | Pagamento simulado                      |
 
 #### **Área Administrativa (CRUD)**
 | Controller                | Métodos CRUD                                 | Descrição                               |
