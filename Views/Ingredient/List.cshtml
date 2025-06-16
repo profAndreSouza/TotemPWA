@@ -1,0 +1,35 @@
+@model IEnumerable<TotemPWA.Models.Ingredient>
+
+@{
+    Layout = "_Admin";
+    ViewData["Title"] = "Ingredientes";
+}
+
+<h1>Ingredientes</h1>
+
+<a asp-action="Create" class="btn btn-primary mb-3">Novo Ingrediente</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Limite</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@item.Limit</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

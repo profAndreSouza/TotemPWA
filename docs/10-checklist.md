@@ -40,7 +40,7 @@
 |-----------------------|---------------------------------------------|-----------------------------------------|
 | [x] `CategoryController`  | `Create()`, `Edit()`, `Delete()`, `List()`  | Gerenciar categorias/subcategorias      |
 | [x] `ProductController`   | `Create()`, `Edit()`, `Delete()`, `List()`  | Produtos e combos                       |
-| [ ] `PromotionController` | `Create()`, `Edit()`, `Delete()`, `List()`  | Promoções vinculadas a produtos         |
+| [x] `PromotionController` | `Create()`, `Edit()`, `Delete()`, `List()`  | Promoções vinculadas a produtos         |
 | [ ] `IngredientController`| `Create()`, `Edit()`, `Delete()`, `List()`  | Ingredientes e associações              |
 | [ ] `CupomController`     | `Generate()`, `Disable()`, `List()`         | Cupons de desconto                      |
 | [ ] `EmployeeController`  | `Register()`, `Edit()`, `Disable()`, `List()`| Funcionários (herdam de `Client`)       |

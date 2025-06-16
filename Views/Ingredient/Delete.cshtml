@@ -1,0 +1,16 @@
+@model TotemPWA.Models.Ingredient
+
+@{
+    Layout = "_Admin";
+    ViewData["Title"] = "Excluir Ingrediente";
+}
+
+<h1>Excluir</h1>
+
+<h4>Tem certeza que deseja excluir o ingrediente <strong>@Model.Name</strong>?</h4>
+
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Confirmar</button>
+    <a asp-action="List" class="btn btn-secondary">Cancelar</a>
+</form>
