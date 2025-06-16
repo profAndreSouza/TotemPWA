@@ -1,0 +1,73 @@
+@model TotemPWA.ViewModels.MenuViewModel
+
+@{
+    ViewData["Title"] = "Menu";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="icon" type="image/png" href="~/img/favicon.png" />
+</head>
+
+<body>
+    <header class="header">
+        <img src="~/img/logotipo.jpeg" alt="Logo do Restaurante" />
+    </header>
+
+    <main class="main-content">
+        <!-- Sidebar com Categorias -->
+        <aside class="sidebar">
+            @foreach (var category in Model.RootCategories)
+            {
+                <a asp-controller="Menu" asp-action="Menu" asp-route-categorySlug="@category.Slug"
+                   class="category-btn @(category.Active ? "active" : "")">
+                    <span class="icon">
+                        <img src="@category.Icon" alt="@category.Name" />
+                    </span>
+                    <span class="label">@category.Name</span>
+                </a>
+            }
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <section class="menu-section">
+            <!-- Subcategorias -->
+            <div class="subcategory-bar">
+                @foreach (var subcategory in Model.Subcategories)
+                {
+                    <a asp-controller="Menu" asp-action="Menu"
+                       asp-route-categorySlug="@Model.SelectedCategorySlug"
+                       asp-route-subcategorySlug="@subcategory.Slug"
+                       class="subcategory-btn @(subcategory.Active ? "active" : "")">
+                        <span class="label">@subcategory.Name</span>
+                    </a>
+                }
+            </div>
+
+            <!-- Produtos -->
+            <div class="menu-container">
+                @foreach (var product in Model.Products)
+                {
+                    <div class="menu-item">
+                        <img src="https://fakeimg.pl/60x60/?retina=1&text=%F0%9F%8D%95" alt="@product.Name" />
+                        <div class="options">
+                            <h3>@product.Name</h3>
+                            <p>Descrição do produto</p>
+                            <strong>@product.Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("pt-BR"))</strong>
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Total do Pedido: <strong>R$ 0,00</strong></p>
+    </footer>
+</body>
+</html>
